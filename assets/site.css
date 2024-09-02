@@ -29,7 +29,7 @@
 body {
   background: var(--background-color);
   color: var(--foreground-color);
-  font-family: monospace;
+  font-family: ui-monospace, monospace;
   max-width: 40em;
 }
 
@@ -84,10 +84,6 @@ a:visited {
 
 .bmtags {
   font-style: italic;
-}
-
-.keepws {
-  white-space: pre;
 }
 
 em {
