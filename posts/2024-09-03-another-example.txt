@@ -1,0 +1,8 @@
+# Another example
+
+This is another sample post without the title tag in the metadata.
+The generator will use the first line of this file as the title.
+
+$#s: Another sample post.
+$#o: site
+$#u: 7e915d04-1a07-4ac6-bfac-8b273c50a112

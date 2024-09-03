@@ -1,0 +1,21 @@
+# Building a site to last long
+
+[People die][1], but what happens to the digital content they create?
+
+I have another homepage with my own domain [xfzhao.com](https://www.xfzhao.com),
+but domains expire. If I pass away, I can't expect anyone to renew the domain
+for me, and the content will soon become inaccessible on the Internet. So, I'll
+move some content to GitHub Pages, publishing under the github.io domain,
+assuming it will [last longer][2] than my own.
+
+The layout of this site is inspired by [elly.town](https://elly.town). All posts
+are written in plain text. Although some Markdown conventions are used, I'm not
+using a Markdown parser to render these `.txt` files.
+
+[1]: https://en.wikipedia.org/wiki/Death_and_the_Internet
+[2]: https://laike9m.com/blog/people-die-but-long-live-github,122/
+
+$#t: Building a site to last long
+$#s: Building a site to last long, hopefully for years after I pass away.
+$#o: site
+$#u: b4af817d-8a83-4c9d-bdd2-6962b77c6b85

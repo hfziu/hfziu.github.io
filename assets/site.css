@@ -33,6 +33,18 @@ body {
   max-width: 40em;
 }
 
+h2.homepage-header {
+  font-size: medium;
+  margin-bottom: 0;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-indent: 2ch;
+}
+
 .box {
   border-width: 1px;
   border-style: solid;
