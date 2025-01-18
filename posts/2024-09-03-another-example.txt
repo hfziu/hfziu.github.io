@@ -1,7 +1,9 @@
 # Another example
 
-This is another sample post without the title tag in the metadata.
-The generator will use the first line of this file as the title.
+This is another sample post without the title tag in the metadata. The
+[generator][1] will use the first line of this file as the title.
+
+[1]: https://hfziu.github.io/scripts/genblog.cc
 
 $#s: Another sample post.
 $#o: site
