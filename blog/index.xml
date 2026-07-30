@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/blog on ~xf</title><link>https://www.xfzhao.com/blog/</link><description>Recent content in /blog on ~xf</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xfzhao.com/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>PragmataPro</title><link>https://www.xfzhao.com/pragmatapro/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://www.xfzhao.com/pragmatapro/</guid><description>&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2026-05-20-pragmatapro/bean.png" alt="purchase"&gt;&lt;/p&gt;
+&lt;p&gt;今天下单买了心水已久的&lt;a href="https://fsd.it/shop/fonts/pragmatapro/" target="_blank" rel="noopener noreferrer"&gt;PragmataPro&lt;/a&gt;。PragmataPro完整版（包含所有&lt;ruby&gt;
+ 字重&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;weight&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;、特性和丰富的glyphs）的售价是€199，拆开来卖的Regular/Italic/Bold/Bold Italic四种字重也分别要€59。我购买的是Essential PragmataPro，Regular/Bold两种字重各€19，没有Italic字重。只包含基本的glyphs，亦不支持&lt;ruby&gt;
+ 连字&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ligatures&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;特性。&lt;/p&gt;
+&lt;p&gt;与&lt;a href="https://github.com/be5invis/Iosevka/blob/main/doc/stylistic-sets.md" target="_blank" rel="noopener noreferrer"&gt;Iosevka ss08&lt;/a&gt;对比了一下，还是有点儿不同的。PragmataPro的清晰度、可读性确实好一点（差别不算很大，也可能是花钱带来的心理暗示。引用作者的话就是: &lt;a href="https://fsd.it/blog/2023/12/14/pragmata-pro-0-830-out-now/#:~:text=more%20comfortable%20readability!-,Try%20to%20believe!,-Other%20changes%3A" target="_blank" rel="noopener noreferrer"&gt;Try to believe!&lt;/a&gt; :P。不过确定的是，PragmataPro的&lt;a href="https://en.wikipedia.org/wiki/X-height" target="_blank" rel="noopener noreferrer"&gt;x-height&lt;/a&gt;更高，看上去更饱满）。&lt;/p&gt;
+&lt;p&gt;&lt;a href="#essential-pragmatapro-v14-supported-glyphs"&gt;Essential PragmataPro包含的glyphs&lt;/a&gt;已经覆盖了我平时看代码/笔记99%的场景中能看到的字符；另一方面，有Iosevka这样的优秀字体补充Essential PragmataPro未能支持的字符，再购买昂贵的full version带给我的额外满足感可能就不太明显了。我当前使用的VS Code font fallback配置是：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;#34;editor.fontFamily&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Essential PragmataPro, Iosevka Fixed&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;#34;editor.fontLigatures&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#39;ss08&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// only affects Iosevka since Essential PragmataPro doesn&amp;#39;t support ligatures
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;由于Iosevka的x-height比PragmataPro稍低一些，所以诸如aàáâ这样的字符放在一起的话，我们可以看到后面3个带调号的àáâ（fallback到Iosevka）比不带调号的a（以Essential PragmataPro字体显示）要矮一些，有点儿不和谐。如果实在介意这一点，可以使用&lt;a href="https://github.com/shytikov/pragmasevka" target="_blank" rel="noopener noreferrer"&gt;Pragmasevka&lt;/a&gt;（一个Iosevka的custom build，微调了x-height）。不过这种字符对我的use case来说太少见了，而且也只有&lt;em&gt;不同字体的相近字母变种&lt;/em&gt;紧贴在一起我才会感觉怪异，如果一些非基本拉丁字母被单独显示，例如 α β γ δ，若不是事先知情，我很难意识到它们fallback到Iosevka了。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2026-05-20-pragmatapro/a.png" alt="a"&gt;&lt;/p&gt;
+&lt;p&gt;至于缺失字重的影响，以VS Code为例，如果 &lt;code&gt;editor.fontFamily&lt;/code&gt; 列表的第一个typeface支持某个字符但没有Bold/Italic字重，VS Code不会fallback到下一个typeface，而会直接以伪粗体或伪斜体（Oblique）显示该字符。一般来说Italic与Regular的设计风格是有些不同的，例如Regular使用double-storey &lt;code&gt;g&lt;/code&gt;而Italic使用&lt;a href="https://creativepro.com/typetalk-two-story-type/" target="_blank" rel="noopener noreferrer"&gt;single-storey&lt;/a&gt; &lt;code&gt;g&lt;/code&gt;。Oblique则是通过算法强行把Regular的字形倾斜一定角度。&lt;/p&gt;
+&lt;p&gt;一些color scheme（e.g., Solarized）会把comments渲染为斜体/伪斜体，如果不喜欢，可以通过override &lt;code&gt;textMateRules&lt;/code&gt;的方式对某些语法元素禁用粗体/斜体。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;&amp;#34;editor.tokenColorCustomizations&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;textMateRules&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;scope&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;comment&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;fontStyle&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样一来comments就会以Regular字重显示，不过好在与其他代码元素仍可通过颜色区分，影响不大。
+Ghostty则直接提供了&lt;a href="https://ghostty.org/docs/config/reference#font-synthetic-style" target="_blank" rel="noopener noreferrer"&gt;&lt;code&gt;font-synthetic-style&lt;/code&gt;&lt;/a&gt;这样的选项来控制是否允许使用伪斜体/伪粗体。&lt;/p&gt;
+&lt;h2 id="history"&gt;
+ &lt;a class="heading-anchor" href="#history" aria-label="Link to this section"&gt;&lt;/a&gt;
+ History
+&lt;/h2&gt;
+&lt;p&gt;PragmataPro这个项目几年来一直在不断演进（例如微调字形、支持新的glyphs/ligatures、引入variable fonts等现代字体特性）。&lt;a href="https://share.google/WXBLdYYO4bbg0uZKx" target="_blank" rel="noopener noreferrer"&gt;version history&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;重新去听了&lt;a href="https://pan.icu/5" target="_blank" rel="noopener noreferrer"&gt;Kernel Panic Ep.05 “编程字体”&lt;/a&gt;，2:01:28处，吴涛推荐了PragmataPro。那个时候还没有Iosevka，PragmataPro是v0.819版本，也还很原始。十多年后的今天，我们有了更多现代、优秀、免费的“编程字体”可选，Condensed design、Ligatures等特性早已不再是PragmataPro的独有优势。As &lt;a href="https://news.ycombinator.com/item?id=36792946" target="_blank" rel="noopener noreferrer"&gt;DiabloD3&lt;/a&gt; puts it:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;hellip; the only reason PragmataPro stands out so well is the ridiculous amount of hand tuning at every height, not necessarily the actual aesthetic look of the font (of which, Iosevka certainly picks up important design cues from, even without SS08 enabled).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="cjk-compatibility"&gt;
+ &lt;a class="heading-anchor" href="#cjk-compatibility" aria-label="Link to this section"&gt;&lt;/a&gt;
+ CJK compatibility
+&lt;/h3&gt;
+&lt;p&gt;我很看重的&lt;a href="https://www.xfzhao.com/cjk-mono-font/"&gt;CJK compatible&lt;/a&gt;（即两个西文字符刚好与一个CJK字符宽度对齐）特性是&lt;a href="https://fsd.it/blog/2016/03/14/pragmatapro-0822-the-silent-revolution/" target="_blank" rel="noopener noreferrer"&gt;2016年3月的v0.822版本&lt;/a&gt;才引入的。此前的版本字符宽度比0.5em更宽一点。&lt;/p&gt;
+&lt;p&gt;值得注意的是，在VS Code中，&lt;a href="https://github.com/microsoft/vscode/issues/286283#issuecomment-3849842726" target="_blank" rel="noopener noreferrer"&gt;默认的Word Wrap（折行）算法（&lt;code&gt;simple&lt;/code&gt;）&lt;/a&gt;假定所有全角字符是一样宽的，并使用&lt;code&gt;U+FF4D&lt;/code&gt;（全角&lt;code&gt;ｍ&lt;/code&gt;）作为宽度参考。而早期PragmataPro(v0.825之前)把&lt;code&gt;U+FF4D&lt;/code&gt;也实现为半角宽度，这会误导VS Code的折行算法，使中英文混排的文本无法在正确位置折行。&lt;a href="https://fsd.it/blog/2017/05/02/pragmatapro-0-825-more-pros/#:~:text=Regular%3A%20improved%20the%20design%20of%20the%20entire%20Fullwidth%20and%20Halfwidth%20letters" target="_blank" rel="noopener noreferrer"&gt;v0.825&lt;/a&gt;修正了这个问题。&lt;/p&gt;
+&lt;p&gt;另外，较新版本的PragmataPro又分为Modularspaced和Monospaced版本，其中后者（字体名为&lt;code&gt;PragmataPro Mono (Liga)&lt;/code&gt;）的所有glyphs都是半宽的，因此始终存在“误导VS Code折行算法”的问题（当然也可以开启VS Code的&lt;code&gt;&amp;quot;editor.wrappingStrategy&amp;quot;: &amp;quot;advanced&amp;quot;&lt;/code&gt;选项来解决，但有额外性能开销）。&lt;/p&gt;
+&lt;p&gt;至于Essential PragmataPro，虽然它也是Monospaced（所有字符都是半宽），但由于其根本不支持&lt;code&gt;U+FF4D&lt;/code&gt;这个码点，反而不会误导VS Code的折行算法。只要其fallback到的字体（我用Iosevka）正确实现了全角的&lt;code&gt;U+FF4D&lt;/code&gt;，就可以正确折行。&lt;/p&gt;
+&lt;h3 id="essential-pragmatapro-v14-supported-glyphs"&gt;
+ &lt;a class="heading-anchor" href="#essential-pragmatapro-v14-supported-glyphs" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Essential PragmataPro v1.4 supported glyphs
+&lt;/h3&gt;
+&lt;p&gt;As of 2026-05, Essential PragmataPro v1.4支持的glyphs有656个，可以用如下命令查看。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;fc-query --format&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;%{charset}\n&amp;#39;&lt;/span&gt; &amp;lt;font_file&amp;gt;.ttf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;包括Basic Latin (0020-007E), Mathematical Operators (2200-22FF), Control Pictures (2400-2426), Box Drawing/Block Elements (2500-259F)；另有一些零散的glyphs，例如希腊字母中只支持了Ω (03A9)和π (03C0)这2个。&lt;a href="https://github.com/fabrizioschiavi/pragmatapro/blob/master/useful_files/Handbook.pdf" target="_blank" rel="noopener noreferrer"&gt;官方Handbook&lt;/a&gt;列出了Essential和完整版的差异。&lt;/p&gt;
+&lt;p&gt;Essential PragmataPro v1.4的字体文件创建日期（Bold是2023-12-13/Regular是2024-01）大约与&lt;a href="https://fsd.it/blog/2023/12/14/pragmata-pro-0-830-out-now/" target="_blank" rel="noopener noreferrer"&gt;完整版0.830&lt;/a&gt;发布时间一致。自从v0.830微调了一些基本字符的字形后，近几年的0.9xx版本主要更新内容是ligatures、更多glyphs、variable font version等，基本不涉及Essential覆盖的字符；所以我推测当前Essential最新的v1.4版本就是0.830的子集。&lt;/p&gt;</description></item><item><title>Self-hosting with Docker and Cloudflared: Minimizing Host OS Exposure</title><link>https://www.xfzhao.com/self-hosted/</link><pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate><guid>https://www.xfzhao.com/self-hosted/</guid><description>&lt;p&gt;I&amp;rsquo;ve recently come to like the idea of &amp;ldquo;minimal host exposure&amp;rdquo; when self-hosting services. The service should be accessed through some kind of reverse proxy or tunnel, while the host OS (perhaps any modern Linux distribution) serves solely as a Docker host and remains as &amp;ldquo;hidden&amp;rdquo; as possible, with no direct access from the Internet.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m using Cloudflare Zero Trust as the tunnel.&lt;/p&gt;
+&lt;h2 id="example-webdav-server"&gt;
+ &lt;a class="heading-anchor" href="#example-webdav-server" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Example: WebDAV server
+&lt;/h2&gt;
+&lt;p&gt;Taking a &lt;a href="https://github.com/hacdias/webdav" target="_blank" rel="noopener noreferrer"&gt;WebDAV server&lt;/a&gt; as an example, we can see how a simple containerized self-hosted service can be set up. In this demo, the Docker Compose configuration files are placed under &lt;code&gt;~/srv/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; this is only meant to demonstrate the overall idea, not to serve as a step-by-step tutorial covering every command and file edit. You may need to adapt the configuration files, copy the token, etc., by yourself.&lt;/p&gt;
+&lt;h3 id="cloudflare-tunnel"&gt;
+ &lt;a class="heading-anchor" href="#cloudflare-tunnel" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Cloudflare Tunnel
+&lt;/h3&gt;
+&lt;p&gt;We should create a Cloudflare tunnel first if one does not already exist. The tunnel itself can also run inside a container.&lt;/p&gt;
+&lt;p&gt;Following &lt;a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/create-remote-tunnel/#1-create-a-tunnel" target="_blank" rel="noopener noreferrer"&gt;Cloudflare’s documentation (Section 1: Create a tunnel, up to step 5)&lt;/a&gt;, we can create a tunnel, &lt;em&gt;copy the token&lt;/em&gt; and save it to &lt;code&gt;~/srv/cloudflared/.env&lt;/code&gt; (make sure that no untrusted users can access this file.):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# ~/srv/cloudflared/.env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="na"&gt;TUNNEL_TOKEN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;eyJh...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then create the Docker Compose configuration file at &lt;code&gt;~/srv/cloudflared/compose.yml&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# ~/srv/cloudflared/compose.yml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;cloudflared&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;cloudflare/cloudflared:latest&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;container_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;cloudflared&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;restart&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;unless-stopped&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;tunnel --no-autoupdate run&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;TUNNEL_TOKEN=${TUNNEL_TOKEN}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;networks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;cloudflared&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;networks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;cloudflared&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;cloudflared&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;driver&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;bridge&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Executing the following command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# cd ~/srv/cloudflared&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;brings up the container. This also creates a named Docker bridge network called &lt;code&gt;cloudflared&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="the-webdav-server-container"&gt;
+ &lt;a class="heading-anchor" href="#the-webdav-server-container" aria-label="Link to this section"&gt;&lt;/a&gt;
+ The WebDAV server container
+&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# ~/srv/webdav/compose.yml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;ervices&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;webdav&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;# A simple and standalone WebDAV server.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;ghcr.io/hacdias/webdav&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;container_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;webdav&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;restart&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;unless-stopped&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;1000:1000&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;volumes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;${HOME}/data/webdav/config.yml:/config.yml:ro&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;${HOME}/data/webdav/data:/data&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="l"&gt;c /config.yml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;networks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;cloudflared&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;networks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;cloudflared&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;external&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This configuration adds the webdav container to the external named network &lt;code&gt;cloudflared&lt;/code&gt; that we just created. In this way, the cloudflared container can access the WebDAV server via container-to-container communication using &lt;code&gt;&amp;lt;container_name&amp;gt;:&amp;lt;port&amp;gt;&lt;/code&gt;, e.g., &lt;code&gt;webdav:6065&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Many self-hosted services require us to mount a data directory or connect to a database (e.g., PostgreSQL) to persist user data and server configuration. In this example, we organize the mapped data under &lt;code&gt;~/data/&lt;/code&gt;. The official documentation of the service may provide a sample configuration file, for example, &lt;a href="https://github.com/hacdias/webdav?tab=readme-ov-file#configuration" target="_blank" rel="noopener noreferrer"&gt;&lt;code&gt;~/data/webdav/config.yml&lt;/code&gt;&lt;/a&gt;. We can define a list of users there. We then mount that configuration file into the container as shown in the &lt;code&gt;compose.yml&lt;/code&gt; file above.&lt;/p&gt;
+&lt;p&gt;Using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# cd ~/srv/webdav&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;may produce output like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;abcdefghijkl ghcr.io/hacdias/webdav &amp;#34;webdav -c /config.y…&amp;#34; 2 seconds ago Up 1 second 6065/tcp webdav
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So the WebDAV server listens on port &lt;code&gt;6065&lt;/code&gt; by default. (In many cases, we may customize the port a service listens on, but here we keep the upstream default configuration as much as possible. It usually does not matter, since we are not mapping the port to the host.)&lt;/p&gt;
+&lt;h3 id="publishing-the-application"&gt;
+ &lt;a class="heading-anchor" href="#publishing-the-application" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Publishing the application
+&lt;/h3&gt;
+&lt;p&gt;Then go back to the Cloudflare Zero Trust dashboard and &lt;a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/create-remote-tunnel/#2a-publish-an-application" target="_blank" rel="noopener noreferrer"&gt;publish this application&lt;/a&gt;. Suppose we have a domain &lt;code&gt;example.com&lt;/code&gt; &lt;a href="https://developers.cloudflare.com/fundamentals/manage-domains/" target="_blank" rel="noopener noreferrer"&gt;managed by Cloudflare&lt;/a&gt;. We can publish an application as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;subdomain: &lt;code&gt;dav&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;domain: &lt;code&gt;example.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;type: &lt;em&gt;HTTP&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;URL&lt;/strong&gt;: &lt;code&gt;webdav:6065&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that in the URL field we enter the WebDAV server&amp;rsquo;s &lt;em&gt;container name&lt;/em&gt; and &lt;em&gt;service port&lt;/em&gt;. No need to use a bare IP address, which feels quite elegant.&lt;/p&gt;
+&lt;p&gt;The WebDAV service can then be accessed at &lt;code&gt;https://dav.example.com&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="benefits"&gt;
+ &lt;a class="heading-anchor" href="#benefits" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Benefits
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;cloudflared&lt;/code&gt; establishes &lt;a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/#outbound-only-connections" target="_blank" rel="noopener noreferrer"&gt;outbound-only connections&lt;/a&gt; to Cloudflare’s global network. This means we do not need to open any port on the host OS firewall (or the VPS provider&amp;rsquo;s firewall). The host can be configured to be completely inaccessible from the outside (except for SSH, of course, if you need remote login for maintenance). The host OS does not even need a public IP address.&lt;/p&gt;
+&lt;p&gt;We also do not need to worry about TLS certificates, since Cloudflare manages them. By applying Cloudflare WAF rules, we can add fine-grained control over who can access our services.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This feels safe and convenient&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I have self-hosted several services this way, e.g., &lt;a href="https://github.com/dani-garcia/vaultwarden" target="_blank" rel="noopener noreferrer"&gt;Vaultwarden&lt;/a&gt;, &lt;a href="https://miniflux.app/" target="_blank" rel="noopener noreferrer"&gt;Miniflux&lt;/a&gt; and Nginx (for static file/webpage hosting).&lt;/p&gt;
+&lt;p&gt;The trade-off is that the service now depends on Cloudflare’s infrastructure. While unlikely, Cloudflare has experienced &lt;a href="https://www.cloudflarestatus.com/history" target="_blank" rel="noopener noreferrer"&gt;several major outages&lt;/a&gt; in recent years. However, for hobby projects or home servers, I am not particularly concerned about that downtime.&lt;/p&gt;</description></item><item><title>CJK-Compatible Monospace Fonts</title><link>https://www.xfzhao.com/cjk-mono-font/</link><pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate><guid>https://www.xfzhao.com/cjk-mono-font/</guid><description>&lt;h2 id="motivation"&gt;
+ &lt;a class="heading-anchor" href="#motivation" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Motivation
+&lt;/h2&gt;
+&lt;p&gt;在中英文混排的文字編輯場景中，我偶爾有「中、英文字符寬度恰好是 2:1」的需求（以下亦稱「西文等寬字體能與中文對齊」）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example: 一個以中文為主的 Markdown 筆記，其中含有中英混排的表格。如能使用與中文對齊的西文字體，則在 editing（而不僅僅是 preview）介面，表格的豎線 | 也可以對齊。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| Col1 | Col2 | Col3 |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| --------- | ------------ | ---- |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| TEXT | 中文 English | &lt;span class="ge"&gt;**&lt;/span&gt; |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;| LONG TEXT | English 中文 | ## |
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上 Markdown 源碼（在假定一個中文字符寬度恰好等於 2 個英文字符的前提下）已經對齊，但如果讀者使用的字體並不滿足「中英文字符寬度恰好 2:1」，則看不到上述 code block 的對齊效果。&lt;/p&gt;
+&lt;h2 id="composite-typefaces"&gt;
+ &lt;a class="heading-anchor" href="#composite-typefaces" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Composite Typefaces
+&lt;/h2&gt;
+&lt;p&gt;有一些現成的中英文混排字體實現了中英字寬 2:1，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/be5invis/Sarasa-Gothic" target="_blank" rel="noopener noreferrer"&gt;Sarasa Gothic Mono 更紗黑體&lt;/a&gt;, a CJK composite font based on Inter, Iosevka and Source Han Sans.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/subframe7536/maple-font" target="_blank" rel="noopener noreferrer"&gt;Maple Mono (CN)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sarasa Gothic 更紗黑體採用了 &lt;a href="https://github.com/be5invis/Iosevka" target="_blank" rel="noopener noreferrer"&gt;Iosevka&lt;/a&gt; 的「瘦高」英文方案，稍微犧牲了英文字符的可讀性，將英文字寬壓縮到 500 EM units (in a 1000 UPM box) 來實現中英字符寬度 2:1；
+而 Maple Mono 選擇了&lt;a href="https://github.com/subframe7536/maple-font/issues/211" target="_blank" rel="noopener noreferrer"&gt;保持英文字符寬度 600 EM units&lt;/a&gt;，將中文的橫向間距拉寬來實現 2:1。Maple Mono 的維護者提出的主要使用場景是「在英文多、中文少的編程環境（可能需要顯示中文字串或註解）」，所以優先照顧英文字體的閱讀體驗，犧牲了中文字的觀感。&lt;/p&gt;
+&lt;h2 id="latin-typefaces"&gt;
+ &lt;a class="heading-anchor" href="#latin-typefaces" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Latin Typefaces
+&lt;/h2&gt;
+&lt;p&gt;我自己需要使用與中文對齊的西文字體的場景，也就&lt;strong&gt;只有&lt;/strong&gt;上文提到的 Markdown 或者 LaTeX &lt;strong&gt;中英文混排製表&lt;/strong&gt;。至於一般的編程，我很少寫中文註解；實際上，很多中英文混排的場景，例如帶有中文 description 和 comments 的 &lt;a href="https://byvoid.com/zht/blog/beancount-bookkeeping-2/" target="_blank" rel="noopener noreferrer"&gt;Beancount 記帳&lt;/a&gt;，只要不涉及製表或 &lt;a href="https://asciiflow.com/#/" target="_blank" rel="noopener noreferrer"&gt;ASCII 製圖&lt;/a&gt;，那麼中英文字符不對齊其實並不會嚴重影響觀感。另一方面，在這些場景中，中文註解通常只會單獨成行或者出現在每行末尾，並不會影響行首部分的英文字符（或 Beancount 中的金額／小數點）對齊。&lt;/p&gt;
+&lt;p&gt;由於 Sarasa Gothic 字體檔案體積較大，英文部分的選擇自由度也不高，我決定單獨選擇英文 monospace 字體，利用「巧合」使中英文對齊。「巧合」是指，我選擇了一個字寬 500 EM units 的英文字體，而我的編輯器需要恰好（或者指定）fallback 到一個字寬 1000 EM units 的中文字體，才能看上去滿足中英字符對齊的要求。在不同的系統／軟件環境下，字體 fallback 的機制不是一兩條規則就能說清楚的。好在字寬 1000 EM units 的中文字體很常見，macOS 上 Visual Studio Code 的預設 fallback 中文字體（PingFang?）已經滿足要求。&lt;/p&gt;
+&lt;p&gt;那麼選擇哪個英文字體呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://typeof.net/Iosevka/" target="_blank" rel="noopener noreferrer"&gt;Iosevka&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Iosevka 的自訂選項非常豐富。首先，它支援很多 &lt;a href="https://github.com/be5invis/Iosevka/blob/main/doc/stylistic-sets.md" target="_blank" rel="noopener noreferrer"&gt;Stylistic Sets&lt;/a&gt;，可以模仿其它流行字體的風格，迎合不同口味；&lt;/li&gt;
+&lt;li&gt;在選定了一個（或保持預設） stylistic set 的基礎上，我們還可以使用 &lt;a href="https://github.com/be5invis/Iosevka/blob/main/doc/character-variants.md" target="_blank" rel="noopener noreferrer"&gt;character variants&lt;/a&gt; 特性，逐一自訂每個字符的風格。例如我使用 &lt;code&gt;&amp;quot;editor.fontLigatures&amp;quot;: &amp;quot;'ss12', 'cv17' 11, 'cv41' 12, 'cv45' 6, 'cv54' 8&amp;quot;&lt;/code&gt; 讓小寫 &lt;code&gt;fjt&lt;/code&gt; 的曲線部分變短，並給大寫 &lt;code&gt;G&lt;/code&gt; 加上襯線。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://fonts.google.com/specimen/M&amp;#43;PLUS&amp;#43;Code&amp;#43;Latin" target="_blank" rel="noopener noreferrer"&gt;M+ Code Latin&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;這是日本語字體家族 &lt;a href="https://mplusfonts.github.io/" target="_blank" rel="noopener noreferrer"&gt;M+ Fonts&lt;/a&gt; 中的 monospace 字體，設計時也考慮了與 CJK 字符對齊。僅包含 Latin 字符，不會影響 CJK 字體 fallback，推薦非日本語（或任何不想影響原 CJK 字體的）使用者使用。&lt;/li&gt;
+&lt;li&gt;M+ Code Latin 是&lt;a href="https://web.dev/articles/variable-fonts" target="_blank" rel="noopener noreferrer"&gt;可變寬度字體&lt;/a&gt;，在 VS Code 中，可以使用 &lt;code&gt;&amp;quot;editor.fontVariations&amp;quot;: &amp;quot;'wdth' 125&amp;quot;&lt;/code&gt; 這樣的配置項進行調節。M+ Code Latin 支援的變寬範圍是 &lt;code&gt;100&lt;/code&gt;(500 EM units，即 1/2 CJK 字符寬度) 到 &lt;code&gt;125&lt;/code&gt;(600 EM units，與多數流行的 monospace 字體如 JetBrains Mono、Source Code Pro 等寬度相同)&lt;/li&gt;
+&lt;li&gt;該家族的另一套 typeface &lt;a href="https://fonts.google.com/specimen/M&amp;#43;PLUS&amp;#43;1&amp;#43;Code" target="_blank" rel="noopener noreferrer"&gt;M+ 1 Code&lt;/a&gt; 同時支持日文與 Latin 字符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上兩個字體在顯示&lt;em&gt;非代碼類&lt;/em&gt;西文文本（e.g., large paragraphs of English text）時顯得密度有點高（因為每個字符都是「高瘦」的），我自己並不習慣。我通常只在中英文混排（以中文為主）及 Terminal Emulator 中使用這種高瘦的字體。
+對高密度 Latin 字符閱讀的場景（如果確實想要使用等寬字體，例如編輯 Markdown 源碼時），我更喜歡 Source Code Pro 這種刻意使用較小 &lt;code&gt;x-height&lt;/code&gt;、&amp;quot;&lt;a href="https://github.com/adobe-fonts/source-code-pro/issues/333#issuecomment-2078617388" target="_blank" rel="noopener noreferrer"&gt;to give the ascenders more &amp;lsquo;room to breathe&amp;rsquo; and give the design &amp;lsquo;a more bookish feel&amp;rsquo;&lt;/a&gt;&amp;quot; 的西文字體。&lt;/p&gt;
+&lt;p&gt;我還發現了另一類英文字寬 500 EM units 的字體，例如 &lt;a href="https://fonts.google.com/specimen/Ubuntu&amp;#43;Mono" target="_blank" rel="noopener noreferrer"&gt;Ubuntu Mono&lt;/a&gt; 和 &lt;a href="https://fonts.google.com/specimen/Inconsolata" target="_blank" rel="noopener noreferrer"&gt;Inconsolata&lt;/a&gt; 。雖然這兩個字體不會給人「過於細長」的感覺，但由於它們相比&lt;em&gt;同字號&lt;/em&gt;的其他 monospace 字體，字型整體看起來偏小，以至於很多人認為這是一個 &lt;a href="https://bugs.launchpad.net/ubuntu/&amp;#43;source/fonts-ubuntu/&amp;#43;bug/1860251" target="_blank" rel="noopener noreferrer"&gt;bug&lt;/a&gt;。2023 年新款的 Ubuntu Sans Mono 修復了這個 &amp;ldquo;bug&amp;rdquo;，整體字型看起來更加和諧，但也&lt;a href="https://github.com/canonical/Ubuntu-Sans-Mono-fonts/issues/10" target="_blank" rel="noopener noreferrer"&gt;失去了&lt;/a&gt; 字符寬為 500 EM units 的 &lt;em&gt;feature&lt;/em&gt;。&lt;/p&gt;
+&lt;h2 id="references"&gt;
+ &lt;a class="heading-anchor" href="#references" aria-label="Link to this section"&gt;&lt;/a&gt;
+ References
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://help.fontlab.com/fontlab-vi/Font-Sizes-and-the-Coordinate-System/" target="_blank" rel="noopener noreferrer"&gt;Font Sizes and the Coordinate System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zhuanlan.zhihu.com/p/623573927" target="_blank" rel="noopener noreferrer"&gt;超棒的中英 2:1 等宽字体组合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://feeshy.github.io/lists/monospace-fonts-width" target="_blank" rel="noopener noreferrer"&gt;能与中文对齐的西文等宽字体&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Sign commits with SSH keys on remote servers</title><link>https://www.xfzhao.com/git-sign/</link><pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate><guid>https://www.xfzhao.com/git-sign/</guid><description>&lt;p&gt;One can sign Git commits using an SSH Key instead of a &lt;a href="basics/15_utils/pgp.md#My%20use%20cases"&gt;GPG Key&lt;/a&gt;. To set up SSH Key signing locally, follow the documentation: &lt;a href="https://docs.gitlab.com/ee/user/project/repository/signed_commits/ssh.html" target="_blank" rel="noopener noreferrer"&gt;GitLab Doc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When connecting to a remote server via SSH, it&amp;rsquo;s possible to sign Git commits using a &lt;em&gt;local&lt;/em&gt; SSH private key without storing it on the remote server. To do this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable &lt;code&gt;ForwardAgent yes&lt;/code&gt; in the local &lt;code&gt;.ssh/config&lt;/code&gt; file for the target server(s).&lt;/li&gt;
+&lt;li&gt;Store the &lt;em&gt;public&lt;/em&gt; key in the remote server&amp;rsquo;s &lt;code&gt;.ssh/&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;Set the signing key for the remote server&amp;rsquo;s Git user: &lt;code&gt;git config --global user.signingkey = xxx&lt;/code&gt;, where &lt;code&gt;xxx&lt;/code&gt; is the path to the stored public key file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The main advantage of signing commits with an SSH Key is avoiding the complex and unreliable GPG agent forwarding process, relying solely on SSH agent forwarding.&lt;/p&gt;</description></item><item><title>[GC] To left test</title><link>https://www.xfzhao.com/gc-to-left/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><guid>https://www.xfzhao.com/gc-to-left/</guid><description>&lt;p&gt;The following function returns true if a point $p_3$ is to the left of the line segment $\overrightarrow{p_1p_2}$.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// ToLeft returns true if p3 is to the left of the line p1p2.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;inline&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;ToLeft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are multiple ways to prove this. One of them is to use the cross product of two vectors.
+In a right-handed &lt;a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system" target="_blank" rel="noopener noreferrer"&gt;Cartesian coordinate system&lt;/a&gt;, $p_3$ is to the left of the line segment $\overrightarrow{p_1p_2}$ if and only if the &lt;a href="https://en.wikipedia.org/wiki/Cross_product" target="_blank" rel="noopener noreferrer"&gt;cross product&lt;/a&gt; of $\overrightarrow{p_1p_2}$ and $\overrightarrow{p_1p_3}$ is positive (i.e., the resulted vector points along the positive z-axis).&lt;/p&gt;
+&lt;p&gt;Let $\vec{i},\vec{j},\vec{k}$ be the unit vectors along the x, y, and z axes, respectively,
+and $(x_i, y_i)$ be the coordinate of point $p_i$ in the $xy$-plane.&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\overrightarrow{p_1p_2} \times \overrightarrow{p_1p_3} &amp;amp;=
+((x_2 - x_1)\vec{i} + (y_2 - y_1)\vec{j}) \times ((x_3 - x_1)\vec{i} + (y_3 - y_1)\vec{j}) \\
+&amp;amp;= (x_2 - x_1)(x_3 - x_1)(\vec{i} \times \vec{i}) + (y_2 - y_1)(y_3 - y_1)(\vec{j} \times \vec{j}) \\
+&amp;amp;\quad + (x_2 - x_1)(y_3 - y_1)(\vec{i} \times \vec{j}) + (y_2 - y_1)(x_3 - x_1)(\vec{j} \times \vec{i}) \\
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;By the definition and the &lt;a href="https://en.wikipedia.org/wiki/Anticommutative_property" target="_blank" rel="noopener noreferrer"&gt;Anticommutative Property&lt;/a&gt; of the cross product, we have&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\vec{i} \times \vec{i} &amp;amp;= \vec{j} \times \vec{j} = 0, \\
+\vec{i} \times \vec{j} &amp;amp;= -\vec{j} \times \vec{i} = \vec{k}.
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Therefore, the cross product of $\overrightarrow{p_1p_2}$ and $\overrightarrow{p_1p_3}$ is&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\overrightarrow{p_1p_2} \times \overrightarrow{p_1p_3} &amp;amp;= ((x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1))\vec{k}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Let the coefficient of $\vec{k}$ to be positive, we can derive the function &lt;code&gt;ToLeft(p1, p2, p3)&lt;/code&gt; as shown above.&lt;/p&gt;
+&lt;p&gt;The inequality $(x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1) &amp;gt; 0$ can also be written as the following determinant:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{vmatrix}
+x_1 &amp;amp; y_1 &amp;amp; 1 \\
+x_2 &amp;amp; y_2 &amp;amp; 1 \\
+x_3 &amp;amp; y_3 &amp;amp; 1
+\end{vmatrix} &amp;gt; 0.
+$$&lt;/p&gt;
+&lt;h2 id="examples"&gt;
+ &lt;a class="heading-anchor" href="#examples" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Examples
+&lt;/h2&gt;
+&lt;p&gt;By the function &lt;code&gt;ToLeft(p1, p2, p)&lt;/code&gt;, we can determine whether a point is located inside a triangle $\triangle p_1p_2p_3$ or not.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// InTriangle returns true if p is inside the triangle p1p2p3.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kr"&gt;inline&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;InTriangle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;b1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ToLeft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;b2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ToLeft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;b3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ToLeft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Diff and LaTeX diff: how to compare two files</title><link>https://www.xfzhao.com/diff/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate><guid>https://www.xfzhao.com/diff/</guid><description>&lt;p&gt;&lt;em&gt;History:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2022-09-05: 初稿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;编辑文档时，我们经常需要比较两个文件（或一份文档在不同时间的两个版本）的不同之处，并以某种可视化形式将其输出。这一操作在版本控制系统（Version Control System, VCS）及论文出版中十分常用。&lt;/p&gt;
+&lt;h2 id="comparing-two-generic-text-files-比较一般文本文件"&gt;
+ &lt;a class="heading-anchor" href="#comparing-two-generic-text-files-%e6%af%94%e8%be%83%e4%b8%80%e8%88%ac%e6%96%87%e6%9c%ac%e6%96%87%e4%bb%b6" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Comparing two generic text files 比较一般文本文件
+&lt;/h2&gt;
+&lt;p&gt;首先讨论一般纯文本文件（plaintext）的比较。 macOS 和多数 Linux 发行版都自带了一个 &lt;code&gt;diff&lt;/code&gt; &lt;a href="https://www.gnu.org/software/diffutils/" target="_blank" rel="noopener noreferrer"&gt;(link)&lt;/a&gt; 命令，这是一个&lt;strong&gt;按行&lt;/strong&gt;比较文件差异的工具。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GNU diff - compare files line by line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们首先创建如下两个示例文件：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;1.txt&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This is my initial version.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Some text here ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;2.txt&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This is my revised version.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Some revised text here ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后运行 &lt;code&gt;diff 1.txt 2.txt&lt;/code&gt;，输出如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1,2c1,2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt; This is my initial version.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt; Some text here ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;gt; This is my revised version.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;gt; Some revised text here ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中第一行 &lt;code&gt;1,2c1,2&lt;/code&gt; 左边的 &lt;code&gt;1,2&lt;/code&gt; 表示文件 &lt;code&gt;1.txt&lt;/code&gt; 的第 1，2 行，&lt;code&gt;c&lt;/code&gt; 表示 &lt;code&gt;change&lt;/code&gt; （类似地，&lt;code&gt;a - append&lt;/code&gt;, &lt;code&gt;d - deletion&lt;/code&gt;），右边的 &lt;code&gt;1,2&lt;/code&gt; 表示 &lt;code&gt;change&lt;/code&gt; 后的结果在文件 &lt;code&gt;2.txt&lt;/code&gt; 中对应的位置是 1，2 行。&lt;a href="https://unix.stackexchange.com/questions/81998/understanding-of-diff-output" target="_blank" rel="noopener noreferrer"&gt;Stackoverflow&lt;/a&gt; 上有一个对 &lt;code&gt;diff&lt;/code&gt; 输出格式详细的解答。&lt;/p&gt;
+&lt;p&gt;事实上，&lt;code&gt;git&lt;/code&gt; 带有一个更好看的 &lt;code&gt;diff&lt;/code&gt; 工具，例如我们可以使用下述命令（不需要建立 Git Repository）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git diff --no-index --word-diff&lt;span class="o"&gt;=&lt;/span&gt;color 1.txt 2.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2022-09-05-diff-and-latex-diff/git-diff-color.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;另外，一些图形化的 VCS 客户端/编辑器支持双栏可视化 &lt;code&gt;diff&lt;/code&gt;，例如在 Visual Studio Code 中，在左侧 &lt;code&gt;EXPLORER&lt;/code&gt; 中依次：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;右键单击一个文件，选择 Select for Compare;&lt;/li&gt;
+&lt;li&gt;右键另一个文件，选择 Compare with Selected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以更直观地比较两个纯文本文件的差异。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2022-09-05-diff-and-latex-diff/vscode-diff.png" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="tracking-changes-between-two-tex-files-and-generating-the-highlighted-pdf-生成高亮修改部分的-pdf"&gt;
+ &lt;a class="heading-anchor" href="#tracking-changes-between-two-tex-files-and-generating-the-highlighted-pdf-%e7%94%9f%e6%88%90%e9%ab%98%e4%ba%ae%e4%bf%ae%e6%94%b9%e9%83%a8%e5%88%86%e7%9a%84-pdf" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Tracking changes between two &lt;code&gt;.tex&lt;/code&gt; files and generating the highlighted &lt;code&gt;.pdf&lt;/code&gt; 生成高亮修改部分的 PDF
+&lt;/h2&gt;
+&lt;p&gt;对于使用 VCS 管理代码的程序员来说，上述 &lt;code&gt;diff&lt;/code&gt; 工具几乎已经够用了。但是，对于使用 LaTeX 生成论文的作者而言，这些工具还是太弱了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先， &lt;code&gt;diff&lt;/code&gt; 的输出对于 text heavy 的论文而言很不直观。而且按行 diff 很不灵活，必然导致审稿人眼花缭乱。&lt;/li&gt;
+&lt;li&gt;而 &lt;code&gt;git diff&lt;/code&gt; 和 VS Code 等带颜色的直观 &lt;code&gt;diff&lt;/code&gt; 工具，只适用于作者在自己电脑上查看，其格式很难输出（not portable）。你很难复制带颜色的终端文本传送给审稿人——总不能截一堆图片吧？&lt;/li&gt;
+&lt;li&gt;LaTeX 文档的源码 &lt;code&gt;.tex&lt;/code&gt; 文件本身是纯文本，无法承载颜色信息。也就是说，「直接用 LaTeX 编译 &lt;code&gt;diff&lt;/code&gt; 的结果」也是意义不大的。&lt;/li&gt;
+&lt;li&gt;由于 LaTeX 文档的源码混杂了很多控制命令，有时候直接 &lt;code&gt;diff&lt;/code&gt; LaTeX 文档源码，可能会产生有歧义甚至无法编译的代码，例如考虑以下文件：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;1.tex&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-tex" data-lang="tex"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;article&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\section&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Introduction&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; This post shows how to use latexdiff to compare two versions of your manuscript.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\subsection&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Related Works&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Some related works go here.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;2.tex&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-tex" data-lang="tex"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;article&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\section&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Introduction&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; This post shows how to use latexdiff to compare two versions of your manuscript.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\section&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Related Works&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Some related works go here.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果直接执行 &lt;code&gt;git diff --no-index --word-diff=color 1.tex 2.tex&lt;/code&gt;，生成的结果是：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2022-09-05-diff-and-latex-diff/git-diff-on-tex.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;这是无法编译的 LaTeX 代码。于是，我们&lt;strong&gt;需要一个工具&lt;/strong&gt;，它能够比较两个 &lt;code&gt;.tex&lt;/code&gt; 文件，并&lt;strong&gt;生成可编译的 LaTeX 代码&lt;/strong&gt;，且&lt;strong&gt;编译后的 PDF&lt;/strong&gt; 能够像 Microsoft Word 的修订模式（Review - Track Changes）那样以红蓝色、删除线等直观地高亮修改过的地方。此工具即是 &lt;code&gt;latexdiff&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="basics"&gt;
+ &lt;a class="heading-anchor" href="#basics" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Basics
+&lt;/h3&gt;
+&lt;p&gt;假设你投稿了一篇以 LaTeX 写成的 Manuscript，其文件名为 &lt;code&gt;initial.pdf&lt;/code&gt;，经过第一轮评审，论文需要 Major Revision，你需要在 X 天后提交修改后的文件 &lt;code&gt;revised.pdf&lt;/code&gt; 及一个长得像 Microsoft Word Revision Track Changes 模式的 &lt;code&gt;diff.pdf&lt;/code&gt; 以标示哪些地方修改了。&lt;/p&gt;
+&lt;p&gt;此时，使用 &lt;code&gt;latexdiff&lt;/code&gt; 的最基本工作流如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;复制&lt;/strong&gt; &lt;code&gt;intitial.tex&lt;/code&gt; -&amp;gt; &lt;code&gt;revised.tex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;根据审稿意见，修改 &lt;code&gt;revised.tex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;运行 &lt;code&gt;latexdiff initial.tex revised.tex &amp;gt; diff.tex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;编译 &lt;code&gt;revised.tex&lt;/code&gt; 及 &lt;code&gt;diff.tex&lt;/code&gt; 文件，生成 PDF，即为 Revision 后需要提交的文档。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上文例子的输出效果：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2022-09-05-diff-and-latex-diff/latexdiff-basics.png" alt=""&gt;&lt;/p&gt;
+&lt;h3 id="the---flatten-flag"&gt;
+ &lt;a class="heading-anchor" href="#the---flatten-flag" aria-label="Link to this section"&gt;&lt;/a&gt;
+ The &lt;code&gt;--flatten&lt;/code&gt; flag
+&lt;/h3&gt;
+&lt;p&gt;上述最基本工作流有一个问题，即如果你的文档 &lt;code&gt;.tex&lt;/code&gt; 源码是多文件结构，例如使用了 &lt;code&gt;\input&lt;/code&gt; 命令，将正文文本放置在单独的文件中：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;initial.tex&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-tex" data-lang="tex"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;article&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\section&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Introduction&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\input&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;intro&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;revised.tex&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-tex" data-lang="tex"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;article&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\section&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Introduction&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;\input&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;intro-revised&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果直接运行&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;latexdiff initial.tex revised.tex &amp;gt; diff.tex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;结果是 &lt;code&gt;latexdiff&lt;/code&gt; 仅仅会将 &lt;code&gt;\input{intro}&lt;/code&gt; 语句换成 &lt;code&gt;\input{intro-revised}&lt;/code&gt; 语句，即输出的 &lt;code&gt;diff.tex&lt;/code&gt; 中&lt;strong&gt;仅有&lt;/strong&gt; &lt;code&gt;intro-revised.tex&lt;/code&gt; 的内容，无法体现 &lt;code&gt;intro.tex&lt;/code&gt; 和 &lt;code&gt;intro-revised.tex&lt;/code&gt; 两者具体内容的差异。&lt;/p&gt;
+&lt;p&gt;此问题的一个解决方案是使用 &lt;code&gt;--flatten&lt;/code&gt; flag，此 flag 告诉 &lt;code&gt;latexdiff&lt;/code&gt;，在执行比较之前，先将 &lt;code&gt;.tex&lt;/code&gt; 中的 &lt;code&gt;\input&lt;/code&gt; 及 &lt;code&gt;\include&lt;/code&gt; 命令展开（即插入实际引用的文件内容），再进行 diff 比较。&lt;/p&gt;
+&lt;h3 id="the---append-context2cmd-flag"&gt;
+ &lt;a class="heading-anchor" href="#the---append-context2cmd-flag" aria-label="Link to this section"&gt;&lt;/a&gt;
+ The &lt;code&gt;--append-context2cmd&lt;/code&gt; flag
+&lt;/h3&gt;
+&lt;p&gt;在很多 LaTeX 文档中，一些命令，如摘要（&lt;code&gt;\abstract{}&lt;/code&gt;）可能并不处于 &lt;code&gt;\begin{document}\end{document}&lt;/code&gt; 之间，&lt;code&gt;latexdiff&lt;/code&gt; 通常以与正文不同的方式处理，很有可能无法正确地生成 &lt;code&gt;\abstract&lt;/code&gt; 的 diff。此时可以使用&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;latexdiff --append-context2cmd&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;abstract&amp;#34;&lt;/span&gt; 1.tex 2.tex &amp;gt; diff.tex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使 &lt;code&gt;latexdiff&lt;/code&gt; 正确地处理摘要。除摘要外，一些其他命令可能也需要类似处理。&lt;code&gt;--append-context2cmd&lt;/code&gt; 是一类 flags 其中的一个，&lt;a href="https://mirrors.ibiblio.org/CTAN/support/latexdiff/doc/latexdiff-man.pdf" target="_blank" rel="noopener noreferrer"&gt;这里&lt;/a&gt;有一份更完整的列表。&lt;/p&gt;
+&lt;h3 id="the-sloppy-command"&gt;
+ &lt;a class="heading-anchor" href="#the-sloppy-command" aria-label="Link to this section"&gt;&lt;/a&gt;
+ The &lt;code&gt;\sloppy&lt;/code&gt; command
+&lt;/h3&gt;
+&lt;p&gt;在排版要求&lt;a href="https://practicaltypography.com/justified-text.html" target="_blank" rel="noopener noreferrer"&gt;“两端对齐”(justified text)&lt;/a&gt;的文档时，我们经常会遇到文字宽度与行宽度不匹配的情况。为了保持两端对齐，排版系统通常会使用下列方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;拉宽行内各单词的间距&lt;/li&gt;
+&lt;li&gt;使用连字符拆分行尾过长的单词 (hyphenate)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通常排版系统 Hyphenate 的行为可以由用户配置。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2022-09-05-diff-and-latex-diff/justified-text.png" alt=""&gt;
+Source: &lt;a href="https://practicaltypography.com/justified-text.html" target="_blank" rel="noopener noreferrer"&gt;https://practicaltypography.com/justified-text.html&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id="latex-的-hyphenation-机制"&gt;
+ &lt;a class="heading-anchor" href="#latex-%e7%9a%84-hyphenation-%e6%9c%ba%e5%88%b6" aria-label="Link to this section"&gt;&lt;/a&gt;
+ LaTeX 的 Hyphenation 机制
+&lt;/h4&gt;
+&lt;p&gt;目前，LaTeX &lt;a href="https://tug.org/tugboat/tb16-3/tb48soj1.pdf" target="_blank" rel="noopener noreferrer"&gt;默认配置下支持 Hyphenate&lt;/a&gt;。显然，软件对 Hyphenate 的支持（例如，什么时候该加 hyphen 什么时候不该加，加在单词的什么地方等等）因语言和词汇而异。LaTeX &lt;a href="https://en.wikibooks.org/wiki/LaTeX/Text_Formatting#Hyphenation" target="_blank" rel="noopener noreferrer"&gt;默认开箱配置下仅支持英语&lt;/a&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;LaTeX hyphenates words whenever necessary. Hyphenation rules will vary for different languages. LaTeX only supports English by default, so if you want to have correct hyphenation rules for your desired language, see &lt;a href="https://en.wikibooks.org/wiki/LaTeX/Internationalization" title="LaTeX/Internationalization" target="_blank" rel="noopener noreferrer"&gt;Internationalization&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有一些 package 如 &lt;code&gt;hyphenat&lt;/code&gt;、&lt;code&gt;extdash&lt;/code&gt; 提供了一些额外的控制 Hyphenate 行为的命令，而 &lt;code&gt;babel&lt;/code&gt; 则为 Hyphenation 提供了&lt;a href="https://en.wikibooks.org/wiki/LaTeX/Internationalization#Hyphenation_and_typography" target="_blank" rel="noopener noreferrer"&gt;多语言支持&lt;/a&gt;。&lt;/p&gt;
+&lt;h4 id="latexdiff-带来的-hyphenation-问题"&gt;
+ &lt;a class="heading-anchor" href="#latexdiff-%e5%b8%a6%e6%9d%a5%e7%9a%84-hyphenation-%e9%97%ae%e9%a2%98" aria-label="Link to this section"&gt;&lt;/a&gt;
+ &lt;code&gt;latexdiff&lt;/code&gt; 带来的 Hyphenation 问题
+&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;latexdiff&lt;/code&gt; 会将新增和删除的文字包含在 &lt;code&gt;DIFaddbegin \DIFadd{ }\DIFaddend&lt;/code&gt; 和 &lt;code&gt;DIFdelbegin \DIFdel{ }\DIFdelend&lt;/code&gt; 之间，这种行为可能导致 LaTeX 无法对大括号 &lt;code&gt;{ }&lt;/code&gt; 中的文字正确地进行 Hyphenation，例如下图中第 248 行最后一个单词，超出了页面边缘：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2022-09-05-diff-and-latex-diff/latex-overfull-no-hyphen.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;那么为什么 LaTeX 不将此单词换到下一行，并使用拉伸单词间距（allow white space to stretch）的方式保持本行的两端对齐呢？原因是 LaTeX 有惩罚机制，即单词间空白 stretch 越多，罚分越高。默认配置罚分不能超过一定阈值（&lt;code&gt;\tolerance&lt;/code&gt;），否则要么 Hyphenation 要么产生 &lt;code&gt;overfull box&lt;/code&gt;。上例即产生了 &lt;code&gt;overfull box&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;一个 Workaround 是 &lt;code&gt;\sloppy&lt;/code&gt; 命令。该命令将 &lt;code&gt;\tolerance&lt;/code&gt; &lt;a href="https://tex.stackexchange.com/questions/241343/what-is-the-meaning-of-fussy-sloppy-emergencystretch-tolerance-hbadness" target="_blank" rel="noopener noreferrer"&gt;设置为一个很大的值&lt;/a&gt;（&lt;code&gt;9999&lt;/code&gt;），即允许更大的行内空白，以保持两端对齐，如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2022-09-05-diff-and-latex-diff/latex-sloppy.png" alt=""&gt;&lt;/p&gt;</description></item><item><title>NetNat for Hyper-V Virtual Machines</title><link>https://www.xfzhao.com/hyper-v-nat/</link><pubDate>Sun, 08 Aug 2021 20:06:08 +0800</pubDate><guid>https://www.xfzhao.com/hyper-v-nat/</guid><description>&lt;p&gt;As stated on the &lt;a href="https://wiki.archlinux.org/title/Hyper-V" target="_blank" rel="noopener noreferrer"&gt;Arch Linux Wiki&lt;/a&gt;,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As of version 1803 (&amp;ldquo;Fall Creators Update&amp;rdquo;), Windows 10 has a NAT Switch built in (named &amp;ldquo;Default Switch&amp;rdquo;) that gives you instant internet access after installing your virtual machine if you set it up to use DHCP, see this &lt;a href="https://techcommunity.microsoft.com/t5/virtualization/what-s-new-in-hyper-v-for-windows-10-fall-creators-update/ba-p/382399" target="_blank" rel="noopener noreferrer"&gt;Technet blog post&lt;/a&gt;, so you do not need the instructions below to get a working NAT switch.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;However, the Default Switch in Hyper-V will assign a random IP address to each Virtual Machine when rebooted, which can be inconvenient. This behavior is &lt;a href="%28https://superuser.com/questions/1526309/hyper-v-default-switch-static-ip%29"&gt;not easily configurable&lt;/a&gt;. If you want to assign a static IP address to a Virtual Machine for a specific purpose like SSH connectivity, you can create a new Internal Switch with NAT capability.&lt;/p&gt;
+&lt;h2 id="create-internal-switch-with-netnat"&gt;
+ &lt;a class="heading-anchor" href="#create-internal-switch-with-netnat" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Create Internal Switch with NetNat
+&lt;/h2&gt;
+&lt;p&gt;Follow the tutorials from &lt;a href="https://wiki.archlinux.org/title/Hyper-V#Internal_switch" target="_blank" rel="noopener noreferrer"&gt;ArchWiki&lt;/a&gt; to create the Internal Switch with NAT:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Create the internal switch with a name of VM-Internal-Switch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;New-VMSwitch&lt;/span&gt; &lt;span class="n"&gt;-Name&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;VM-Internal-Switch&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-SwitchType&lt;/span&gt; &lt;span class="n"&gt;Internal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Verify that the internal switch was created&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;Get-VMSwitch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Get the ifIndex of the newly created internal switch, usually named &amp;#39;vEthernet (name)&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;Get-NetAdapter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Set the IP address of the internal switch, noting the ifIndex retrieved from the previous command.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# In this example, the network address of the internal switch is 192.168.3.0/24, and the ifIndex is 50.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;New-NetIPAddress&lt;/span&gt; &lt;span class="n"&gt;-IPAddress&lt;/span&gt; &lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;1&lt;/span&gt; &lt;span class="n"&gt;-PrefixLength&lt;/span&gt; &lt;span class="mf"&gt;24&lt;/span&gt; &lt;span class="n"&gt;-InterfaceIndex&lt;/span&gt; &lt;span class="mf"&gt;50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# The virtual machines using the internal switch must use static IP addresses, such as 192.168.3.2/24.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Support for DHCP in internal switches is not included in current Windows versions (as of Version 1703, OS Build 15063).&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Create the NAT with IP address of the internal switch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;New-NetNat&lt;/span&gt; &lt;span class="n"&gt;-Name&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;VM-NAT-Network&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-InternalIPInterfaceAddressPrefix&lt;/span&gt; &lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;24&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Verify that the NAT was created&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;Get-NetNat&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Enable SSH port forwarding on port 2222 of any interface on the host, to a virtual machine with an IP address of 192.168.3.2/24&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;Add-NetNatStaticMapping&lt;/span&gt; &lt;span class="n"&gt;-NatName&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;VM-NAT-Network&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-Protocol&lt;/span&gt; &lt;span class="n"&gt;TCP&lt;/span&gt; &lt;span class="n"&gt;-ExternalIPAddress&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt; &lt;span class="n"&gt;-ExternalPort&lt;/span&gt; &lt;span class="mf"&gt;2222&lt;/span&gt; &lt;span class="n"&gt;-InternalIPAddress&lt;/span&gt; &lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;2&lt;/span&gt; &lt;span class="n"&gt;-InternalPort&lt;/span&gt; &lt;span class="mf"&gt;22&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Verify that the port forward is active&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;PS &lt;/span&gt;&lt;span class="n"&gt;C:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;WINDOWS&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;system32&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;Get-NetNatStaticMapping&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Microsoft has provided more &lt;a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/setup-nat-network" target="_blank" rel="noopener noreferrer"&gt;detailed documentation&lt;/a&gt; on setting up a NAT network in Hyper-V.&lt;/p&gt;
+&lt;h2 id="network-settings-in-virtual-machines"&gt;
+ &lt;a class="heading-anchor" href="#network-settings-in-virtual-machines" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Network Settings in Virtual Machines
+&lt;/h2&gt;
+&lt;p&gt;By default, the Internal Switch does not automatically assign IP addresses like a DHCP server to Virtual Machines. We need to manually configure static IPs inside each VM. Setting static IPs is appropriate in this case since they are used for remote connection purposes.&lt;/p&gt;
+&lt;p&gt;We can attach two Network Adapters to each Virtual Machine: One linked to the Default Switch for external network access, and the other connected to the newly created Internal Switch for remote connections using the static IP addresses.&lt;/p&gt;
+&lt;h3 id="freebsd"&gt;
+ &lt;a class="heading-anchor" href="#freebsd" aria-label="Link to this section"&gt;&lt;/a&gt;
+ FreeBSD
+&lt;/h3&gt;
+&lt;p&gt;Edit &lt;code&gt;/etc/rc.conf&lt;/code&gt; file. Set the first network adapter to use DHCP for automatic IP assignment. For the second adapter, specify a static IP configuration:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# /etc/rc.conf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ifconfig_hn0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;DHCP&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ifconfig_hn1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;inet 192.168.3.2 netmask 255.255.255.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# other configurations ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You may find the detailed documentation in &lt;a href="https://docs.freebsd.org/en/books/handbook/config/#config-network-setup" target="_blank" rel="noopener noreferrer"&gt;FreeBSD Handbook&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="arch-linux"&gt;
+ &lt;a class="heading-anchor" href="#arch-linux" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Arch Linux
+&lt;/h3&gt;
+&lt;p&gt;When using &lt;a href="https://wiki.archlinux.org/title/systemd-networkd#Configuration_examples" target="_blank" rel="noopener noreferrer"&gt;systemd-networkd&lt;/a&gt;, create the following configuration files:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#/etc/systemd/network/20-default.network&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;Match&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;eth0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;Network&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;DHCP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#/etc/systemd/network/25-internal.network&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;Match&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;eth1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;Network&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;192.168.3.3/24
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;Gateway&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;192.168.3.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;192.168.3.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Sublime Text 4, LSP, VS Code and clangd</title><link>https://www.xfzhao.com/lsp/</link><pubDate>Thu, 27 May 2021 21:06:08 +0800</pubDate><guid>https://www.xfzhao.com/lsp/</guid><description>&lt;h2 id="sublime-text-4"&gt;
+ &lt;a class="heading-anchor" href="#sublime-text-4" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Sublime Text 4
+&lt;/h2&gt;
+&lt;p&gt;前几天 &lt;a href="https://www.sublimetext.com/blog/articles/sublime-text-4" target="_blank" rel="noopener noreferrer"&gt;Sublime Text 4 Stable 发布了&lt;/a&gt;。在此之前我是 Sublime Text 3 的付费用户。大约 2014 - 2015 年，我开始转用 LaTeX 写当时所学课程大大小小的课程作业，顺便发现了 Sublime Text 和 LaTeXTools 插件。彼时没有怎么见过世面的我，因为这种丝滑的智能提示和自动补全功能深受感动，觉得这么让人精神愉悦的软件不充点钱简直对不起作者。后来一激动一咬牙，就为信仰充值了：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2021-05-27-sublime-lsp-vscode-clangd/sublime-license.png" alt="Sublime-License"&gt;&lt;/p&gt;
+&lt;p&gt;后来 &lt;a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer"&gt;Visual Studio Code&lt;/a&gt; 问世，并且在之后的几年里发展十分迅速，如今应该已经是最（？）受欢迎的 Code Editor 了。VS Code 的更新维护十分活跃，插件的质量也很高。&lt;/p&gt;
+&lt;p&gt;很长一段时间里我用 Text Editor 最重要的用途是写 LaTeX。后来 VS Code + LaTeX Workshop 的组合已经十分令我满意了，我也不再去折腾 Sublime Text 及其 LaTeXTools 插件。对我而言，Sublime Text 相比 VS Code 还剩下的为数不多的优势就是&lt;strong&gt;启动快&lt;/strong&gt;。另外，Sublime Text 的 Key binding 也是先入为主，我至今依然习惯在 VS Code 和 JetBrains 的 IDE 里面使用 Sublime Text 快捷键键位。&lt;/p&gt;
+&lt;p&gt;这次 Sublime Text 4 的 License Upgrade （折扣）价格是 &lt;strong&gt;70USD&lt;/strong&gt;，与 6 年前我原价购买 ST3 时价格一致。现如今我倒暂时没有什么续费欲望了。不过 Sublime Text 是一个良心「&lt;a href="https://en.wikipedia.org/wiki/Shareware#Nagware" target="_blank" rel="noopener noreferrer"&gt;唠叨软件（Nagware）&lt;/a&gt;」，也就是说如果不掏钱，它只会不时地弹出一个窗口劝你掏钱，除此之外没有功能或时间限制。&lt;/p&gt;
+&lt;p&gt;于是这次 ST4 我也及时升级了。升级之后趁着新鲜，去搜索围观别人有什么推荐的 Sublime Text 插件。这次首先留意到的是 &lt;a href="https://github.com/sublimelsp/LSP" target="_blank" rel="noopener noreferrer"&gt;LSP&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id="language-server-protocol"&gt;
+ &lt;a class="heading-anchor" href="#language-server-protocol" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Language Server Protocol
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://microsoft.github.io/language-server-protocol/" target="_blank" rel="noopener noreferrer"&gt;Language Server Protocol (LSP)&lt;/a&gt; 是 Microsoft 发布的一个协议，用于 Language Server 和 Development Tools（比如 Text Editor 或 IDE）之间的跨进程通信。&lt;/p&gt;
+&lt;p&gt;Language Server 是一种将「语言特性」和「编辑工具」&lt;strong&gt;解耦&lt;/strong&gt;的尝试。这种想法现在看来非常自然：&lt;/p&gt;
+&lt;p&gt;我们使用编辑器浏览、编辑代码，常常希望 Editor 能够有智能提示、自动补全、语法检查、引用检查、跳转等功能。而且我们希望这些功能足够智能，以至于 Editor 需要理解具体编程语言（如 C++，Python）的语义，乃至了解整个项目中多个源文件的关系。&lt;/p&gt;
+&lt;p&gt;以前，如果要求每一个编辑器或自动补全插件的作者自己去实现这些功能，那将是非常浩大的工程：编程界的语种多如牛毛，且其中不乏复杂庞大的语言。由于 Editor 插件的开发者精力有限，必然导致这样的智能补全/提示工具质量参差不齐。&lt;/p&gt;
+&lt;p&gt;那么，何不让专业的工具做专业的事呢？假设有一个与编程语言相关的程序在后台运行，这个程序负责理解特定语言（如 C++）的代码；而 Editor 负责与用户交互：检测用户的行为，比如打开文件、输入字符、鼠标悬停在文件的某个位置、执行了「Go to definition」命令等等；然后 Editor 将这些信息传递给后台那个负责理解语言的后台程序，该程序根据语言的语义给出响应，比如对于鼠标悬停，就给出悬停位置那个变量或函数的文档；对于「Go to definition」，就返回 Definition 所在的文件及行号。&lt;/p&gt;
+&lt;p&gt;这个在后台运行的、理解语言特性的程序，就是 Language Server。而 Language 与 Editor 之前互传信息所使用的通信协议，即 LSP。&lt;/p&gt;
+&lt;p&gt;有了 LSP 这个设计，一个 Language Server 就可以支持多种 Editor 的智能编辑；而一个 Editor 如果要想增强对一个语言的支持，它无需花费太大成本自行开发那个语言的解析功能，而只要能够兼容 LSP，能够连接对应语言的 Language Server 就可以了。&lt;/p&gt;
+&lt;h2 id="clangd"&gt;
+ &lt;a class="heading-anchor" href="#clangd" aria-label="Link to this section"&gt;&lt;/a&gt;
+ clangd
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://clangd.llvm.org/" target="_blank" rel="noopener noreferrer"&gt;clangd&lt;/a&gt; 是 C++ 的 Language Server 之一（其他的一些 Language Servers 见&lt;a href="https://microsoft.github.io/language-server-protocol/implementors/servers/" target="_blank" rel="noopener noreferrer"&gt;此页面&lt;/a&gt;）。clangd 的 Slogan 很有意思：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;teach your editor C++&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="macos-安装-clangd"&gt;
+ &lt;a class="heading-anchor" href="#macos-%e5%ae%89%e8%a3%85-clangd" aria-label="Link to this section"&gt;&lt;/a&gt;
+ macOS 安装 clangd
+&lt;/h3&gt;
+&lt;p&gt;由于 clangd 是 &lt;a href="https://llvm.org/" target="_blank" rel="noopener noreferrer"&gt;LLVM Project&lt;/a&gt; 的一部分，实际上 Apple 的工具链已经包含了 clangd，但却可能没有被添加到默认 &lt;code&gt;PATH&lt;/code&gt; 变量中。&lt;/p&gt;
+&lt;p&gt;如果安装过 Xcode Command Line Tools 或者 Xcode.app 二者之一（如果没有，可以用 &lt;code&gt;xcode-select --install&lt;/code&gt; 安装，或直接去 Mac App Store 下载 Xcode），&lt;code&gt;clangd&lt;/code&gt; 大概就在下面的 2 个位置之一：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clangd --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Apple clangd version 12.0.5 (clang-1205.0.22.9)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/Library/Developer/CommandLineTools/usr/bin/clangd --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Apple clangd version 12.0.5 (clang-1205.0.22.9)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者也可以使用 Homebrew 安装（注意这依然不在默认 &lt;code&gt;PATH&lt;/code&gt; 里面）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install llvm
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/usr/local/opt/llvm/bin/clangd --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# clangd version 12.0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; Apple Toolchains 里面的 clangd 似乎不能正确读取下面将要讨论的 clangd 配置文件 (&lt;code&gt;config.yaml&lt;/code&gt;) 里面的键。所以我暂且用 Homebrew 安装的 clangd.&lt;/p&gt;
+&lt;h3 id="linux-安装-clangd"&gt;
+ &lt;a class="heading-anchor" href="#linux-%e5%ae%89%e8%a3%85-clangd" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Linux 安装 clangd
+&lt;/h3&gt;
+&lt;p&gt;通常直接使用包管理器安装即可，如 &lt;code&gt;apt install clangd&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="sublime-text-安装-lsp-并使用-clangd"&gt;
+ &lt;a class="heading-anchor" href="#sublime-text-%e5%ae%89%e8%a3%85-lsp-%e5%b9%b6%e4%bd%bf%e7%94%a8-clangd" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Sublime Text 安装 LSP 并使用 clangd
+&lt;/h3&gt;
+&lt;p&gt;Sublime Text 安装插件管理器 &lt;a href="https://packagecontrol.io/" target="_blank" rel="noopener noreferrer"&gt;PackageControl&lt;/a&gt; 并用 PackageControl 安装 LSP。对于一个项目，在使用 Sublime Text 打开后，应该用 &lt;code&gt;Cmd/Ctrl + Shift + P&lt;/code&gt; 然后 &lt;code&gt;Enable Language Server in Project/Globally&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;如果你已经自行把 &lt;code&gt;clangd&lt;/code&gt; 所在目录添加到了 &lt;code&gt;PATH&lt;/code&gt; 环境变量中，那么这套 Sublime Text + LSP + clangd 的组合应该是 works out of the box。如果没有，也可以在 LSP 插件的配置文件（Sublime 菜单 - Preferences - Package Settings - LSP - Settings）中指定 &lt;code&gt;clangd&lt;/code&gt; 的路径：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;&amp;#34;clients&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;clangd&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;/usr/local/opt/llvm/bin/clangd&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果你的项目非常简单，比如只有一个 &lt;code&gt;hello.cpp&lt;/code&gt; 源文件，clangd 默认你的项目只要简单地&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;clang hello.cpp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;就能编译成功，那 clangd 同样也能很好地完成智能语法检查、提示。但如果你的项目较大，使用某种构建系统，涉及到多文件管理，依赖也比较复杂：例如，某个源码引用了一个 Header &lt;code&gt;#include &amp;quot;a.h&amp;quot;&lt;/code&gt;，并且在编译时要用 &lt;code&gt;-I/some/special/path/to/a&lt;/code&gt; 指定搜索路径才能找到该 Header；但默认情况下， clangd 并不知道要去搜索额外的路径，它只会在默认搜索路径下寻找，找不到 &lt;code&gt;a.h&lt;/code&gt; 然后给出（不该给的）报错。&lt;/p&gt;
+&lt;h3 id="cmake-项目输出-compile_commandsjson"&gt;
+ &lt;a class="heading-anchor" href="#cmake-%e9%a1%b9%e7%9b%ae%e8%be%93%e5%87%ba-compile_commandsjson" aria-label="Link to this section"&gt;&lt;/a&gt;
+ CMake 项目输出 &lt;code&gt;compile_commands.json&lt;/code&gt;
+&lt;/h3&gt;
+&lt;p&gt;解决上述问题的方法自然是告诉 clangd 你将要用的所有编译命令。如果项目使用 CMake 构建系统，则可以在 &lt;code&gt;CMakeLists.txt&lt;/code&gt; 里加入&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_EXPORT_COMPILE_COMMANDS&lt;/span&gt; &lt;span class="s"&gt;ON&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者在执行 CMake Configure 的时候直接带命令行参数&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmake -H. -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样 CMake 便会在构建目录下生成一个 &lt;code&gt;compile_commands.json&lt;/code&gt; 文件（即 Compilation Database），把它放在项目源码根目录下即可。&lt;/p&gt;
+&lt;p&gt;如果使用 CMake 之外的其他构建系统，这里有一些生成 Compilation Database 的说明：&lt;a href="https://clang.llvm.org/docs/JSONCompilationDatabase.html" target="_blank" rel="noopener noreferrer"&gt;JSON Compilation Database Format Specification&lt;/a&gt;；&lt;a href="https://www.jetbrains.com/help/clion/compilation-database.html" target="_blank" rel="noopener noreferrer"&gt;Compilation database - JetBrains Clion Help Center&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="效果"&gt;
+ &lt;a class="heading-anchor" href="#%e6%95%88%e6%9e%9c" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 效果
+&lt;/h3&gt;
+&lt;p&gt;一切就绪之后，打开一个 C++ 源文件，鼠标悬停于某些变量或函数之上，应该可以看到弹出的提示；也可以点击 Definition、Declaration 等链接进行跳转。打开 LSP Log，还可以看到 Editor 与 clangd 之间的通信过程：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2021-05-27-sublime-lsp-vscode-clangd/clangd-leveldb-hover.png" alt="clangd-leveldb-hover"&gt;&lt;/p&gt;
+&lt;h3 id="clangd-配置"&gt;
+ &lt;a class="heading-anchor" href="#clangd-%e9%85%8d%e7%bd%ae" aria-label="Link to this section"&gt;&lt;/a&gt;
+ clangd 配置
+&lt;/h3&gt;
+&lt;p&gt;clangd 有一些特性并未默认开启，比如 Clang-Tidy.&lt;/p&gt;
+&lt;p&gt;可以创建一个 clangd &lt;a href="https://clangd.llvm.org/config.html" target="_blank" rel="noopener noreferrer"&gt;配置文件&lt;/a&gt;开启这些特性：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# macOS: ~/Library/Preferences/clangd/config.yaml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# Linux: $XDG_CONFIG_HOME/clangd/config.yaml, ~/.config/clangd/config.yaml&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;Diagnostics&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;ClangTidy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;Add&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="l"&gt;performance-*, bugprone-*, portability-*, modernize*]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;Remove&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;modernize-use-trailing-return-type&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重启一下 Language Server, 便可获得 Clang-Tidy 提示：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/screenshots/2021-05-27-sublime-lsp-vscode-clangd/clang-tidy.png" alt="clang-tidy"&gt;&lt;/p&gt;
+&lt;h2 id="visual-studio-code"&gt;
+ &lt;a class="heading-anchor" href="#visual-studio-code" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Visual Studio Code
+&lt;/h2&gt;
+&lt;p&gt;借 Sublime Text 4 发布的&lt;strong&gt;机缘&lt;/strong&gt;，我了解了 LSP 的机制。不过最后我还是没有用 ST4 写 C++ 代码，而是又转回了 VS Code。VS Code 官方（即 Microsoft）也有一个 C++ 的 Language Server，即 C/C++ 插件，智能辅助的功能也叫 IntelliSense。不过经过我肤浅的体验，我觉得 IntelliSense 没有 clangd 用起来舒服，所以将 VS Code 的 C++ Language Server 也设置成了 clangd。&lt;/p&gt;
+&lt;p&gt;这个过程当然很简单，只有 2 点：安装并启用 clangd，并关闭 IntelliSense：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// settings.json
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;&amp;#34;C_Cpp.intelliSenseEngine&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Disabled&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;&amp;#34;C_Cpp.autocomplete&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Disabled&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;&amp;#34;C_Cpp.errorSquiggles&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Disabled&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// If clangd is not in PATH:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;&amp;#34;clangd.path&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;/path/to/clangd&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;换到 VS Code 的原因是 VS Code 的 Remote 插件实在是太易用了（个人感觉远好于我常用的 CLion），我可以轻松地连接到我在实验室的台式机，直接打开台式机里面的项目源码进行编辑。而由于 clangd 这类 Language Server 的存在，VS Code 对代码的「理解」能力大大增强，与 IDE 之间的鸿沟也显著缩小。另外，那台台式机的 i7 - 9700K CPU 无论是 indexing 还是编译代码，都比我的笔记本爽快不少。&lt;/p&gt;</description></item><item><title>Buying YubiKeys</title><link>https://www.xfzhao.com/yubikey/</link><pubDate>Sun, 10 Jan 2021 14:07:15 +0800</pubDate><guid>https://www.xfzhao.com/yubikey/</guid><description>&lt;p&gt;最近我下单了（我的第 4 个）YubiKey. 下单的型号是 2020 年 9 月推出的 YubiKey 5C NFC. 目前我不确定 Firmware 版本是多少，但既然是官方网站下单，理论上是下单时刻最新的，至少是 5.2.4+. 与我之前已经持有的 YubiKey 相比，对我而言最大的改进是固件支持 ECC 算法的 GPG Key，以及可以直插 USB-C 了。&lt;/p&gt;
+&lt;h2 id="第-1-只-yubikey-4"&gt;
+ &lt;a class="heading-anchor" href="#%e7%ac%ac-1-%e5%8f%aa-yubikey-4" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 第 1 只： YubiKey 4
+&lt;/h2&gt;
+&lt;p&gt;2017 年生日附近，我购买了第一个 YubiKey 4 作为自己的生日礼物。由于 YubiKey 官网不能选择直邮中国大陆，当时我选择了一家叫做 SFBuy 的中国转运公司（貌似是顺丰旗下的），美国的转运仓库。当时好像只要有 GitHub 账号（不需要有 Student Developer Pack）就可以在 Yubico 官网拿到 8 折优惠。美国境内运费 5 美元。&lt;/p&gt;
+&lt;p&gt;当时一共花了 YubiKey $40*0.8 + 美国境内运费 $5 + 转运费大约 ¥40.&lt;/p&gt;
+&lt;p&gt;Yubico 官网 $5 元的快递选项号称没有 tracking code, 但当时实际上是有的。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/yubico-order-2017.png" alt="yubico-order-2017"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/yubico-shipment-2017.png" alt="yubico-shipment-2017"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="第-2-只yubikey-4-firmware-updated"&gt;
+ &lt;a class="heading-anchor" href="#%e7%ac%ac-2-%e5%8f%aayubikey-4-firmware-updated" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 第 2 只：YubiKey 4 (Firmware Updated)
+&lt;/h2&gt;
+&lt;p&gt;买了第 1 只 YubiKey 之后不久，Yubico 发现它的一部分固件有一个漏洞：&lt;a href="https://www.yubico.com/keycheck/" target="_blank" rel="noopener noreferrer"&gt;Infineon RSA Key Generation Issue&lt;/a&gt;. 简而言之就是 YubiKey 使用的英飞凌的加密程序库里面 RSA 密钥生成的部分有个漏洞，导致在 YubiKey 里生成的密钥安全性不足。当然，其实我的 GPG Key 是在电脑上生成然后转移到 YubiKey 里面的，所以似乎不会受这个漏洞影响。&lt;/p&gt;
+&lt;p&gt;这个漏洞影响了固件版本在 4.2.6 – 4.3.4 之间的 YubiKeys，而且由于 YubiKey 的设计，其固件是不能更新的，要完全堵住这个漏洞必须重新买一个新的。Yubico 公司发起了一个免费更换服务，符合条件的 YubiKey 可以得到一个验证码，凭码可以免费领取一个新的 YubiKey. 当时正好 TUNA 的群里有小伙伴提起这事，群里有身在美国的小伙伴热心代大家领取。我查询了一下我的 YubiKey 符合换新资格，于是搭了个便车，2017 年末，换新的 Key 几经辗转，终于拿到手。感谢 TUNA 的朋友。&lt;/p&gt;
+&lt;h2 id="第-3-只-yubikey-5-nfc"&gt;
+ &lt;a class="heading-anchor" href="#%e7%ac%ac-3-%e5%8f%aa-yubikey-5-nfc" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 第 3 只： YubiKey 5 NFC
+&lt;/h2&gt;
+&lt;p&gt;2019 年初在 V2EX 上看到有网友要去美国，顺便给大家带点 YubiKey, 这次我又搭了便车。 网友回国后，在闲鱼上挂了个单把 YubiKey 转给我。除了国内快递费没有收代购费，良心网友👍&lt;/p&gt;
+&lt;p&gt;这只比之前的 Key 有 2 大改进：&lt;/p&gt;
+&lt;p&gt;一是支持 FIDO2，目前我常用的账号中似乎只有 Microsoft 账号能感受到这个功能带来的明显改变。通过 FIDO2，在登录 Microsoft 账号的时候，不需要输入用户名，更不需要输入密码，直接插上 YubiKey 然后选择用 Windows Hello 或 Security Key 登录即可。可能需要输入 Key 的 PIN。这个功能目前 Safari 是不支持的，Chrome 和 Microsoft Edge （旧/新均可）都支持。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/microsoft-login.png" alt="microsoft-login"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/microsoft-login-2.png" alt="microsoft-login-2"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;二是支持 NFC， 在支持 NFC 的手机（如 iPhone 7 之后的型号，需要支持读取 NFC tags）上可以直接用于某些网站的 2 步验证了：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/google-login.jpg" alt="google-login"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/google-login-2.jpg" alt="google-login-2"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="第-4-只-yubikey-5c-nfc"&gt;
+ &lt;a class="heading-anchor" href="#%e7%ac%ac-4-%e5%8f%aa-yubikey-5c-nfc" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 第 4 只： YubiKey 5C NFC
+&lt;/h2&gt;
+&lt;p&gt;2020 年 9 月，Yubico 推出了一个全新的型号 YubiKey 5C NFC.&lt;/p&gt;
+&lt;p&gt;以前的 YubiKey 有 USB-C 接口版，有 NFC + USB-A 版，但是随着 USB-C 的普及，偏偏缺少一个同时支持 USB-C 和 NFC 的 All in One Solution。 去年有 Reddit 网友问：&lt;a href="https://www.reddit.com/r/yubikey/comments/gt6sf4/all_in_one_key/" target="_blank" rel="noopener noreferrer"&gt;Anyone know if they are planning to release a version that cover both NFC and USB-C?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我目前主力和唯一的个人电脑是 MacBook Pro 13′ 2018，全部都是 USB-C 口，所以 YubiKey 5C NFC 推出后，我第一时间就有关注，因为这确实是我理想中的 All in one 个人安全硬件；但是实话说这个版本和 YubiKey 5 NFC 改进说小不小，说大不大。目前的 5 NFC 我也是套着一个绿联的 USB-C to A 转接头一直这么用着。&lt;/p&gt;
+&lt;p&gt;不管怎样，先拿 edu 邮箱&lt;a href="https://www.yubico.com/solutions/industries/education/" target="_blank" rel="noopener noreferrer"&gt;申请&lt;/a&gt;一个 8 折教育优惠，买不买再说：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/yubico-discount-20.png" alt="yubico-discount-20"&gt;&lt;/p&gt;
+&lt;p&gt;自从 9 月拿到这个优惠码之后，我一直犹豫没有行动。等到 12 月的时候，Yubico 把折扣给我改到了 7 折：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/yubico-discount-30.png" alt="yubico-discount-30"&gt;&lt;/p&gt;
+&lt;p&gt;犹豫再三，我还是在 2020 年的尾巴下单了。因为人在香港，这次选择的是官网直邮，邮费依然是 5 美元。这次真没找到 tracking code，估计是平邮。而且不是从美国而是从欧洲（Sweden ?）发过来的。&lt;/p&gt;
+&lt;p&gt;相对于之前的版本，这次买的新版 5C NFC 主要改进一是让我可以摆脱绿联转接头了，二是可以体验一下 Ed25519 算法的 GPG Key (固件 5.2.3 之前的版本只支持 RSA)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2021-01-29 Update:&lt;/strong&gt; 经过 20 多天无 tracking no. 的平邮配送，今晚在楼下检查信箱的时候，终于到了~&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://static.xfzhao.com/img/wpb-2021-buy-yubikeys/yubikey-5cnfc-env.jpg" alt="yubikey-5cnfc-env"&gt;&lt;/p&gt;
+&lt;h2 id="notes"&gt;
+ &lt;a class="heading-anchor" href="#notes" aria-label="Link to this section"&gt;&lt;/a&gt;
+ Notes
+&lt;/h2&gt;
+&lt;p&gt;我目前用到的 YubiKey 功能比较基础，例如 GPG Smart Card，FIDO2/WebAuthn，Static Password，OATH，PIV 还有那个 Yubico Authenticator 等。我自己尚未造过任何轮子（&lt;a href="https://hk.v2ex.com/t/565640" target="_blank" rel="noopener noreferrer"&gt;这里有个网友造的轮子&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;这里不写各个功能的教程（网上已有很多），只罗列一些我想到的关于使用的零星建议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;YubiKey 中直接生成的 GPG Key，理论上不可以被读取出来（也就是不可以备份）。硬件丢失了则这个 GPG Key 也就永久丢失了。&lt;/li&gt;
+&lt;li&gt;因为 GPG primary key 涉及到 Web of Trust，一旦丢失很麻烦，所以 GPG primary key 建议在外部（电脑上，尤其是不联网的电脑上）生成，然后备份到一个非常安全的地方，例如加密的 U 盘。&lt;/li&gt;
+&lt;li&gt;最好再生成三个 subkeys，备份后用 keytocard 命令写入 YubiKey. 平时就使用 YubiKey 里面这三个 subkeys.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2021-01-30 第4个Key（YubiKey 5C NFC）到手后 Update:&lt;/strong&gt; 由于现在手边有较多闲置的 Key 了，最新的 Key 接口最丰富、功能最多，所以用作日常使用；旧的 Key 则成了绝佳的备份 GPG primary key 的地方（替代加密的 U 盘）。&lt;/p&gt;
+&lt;p&gt;以前，我的 primary key —— RSA4096 的 —— 是存储在一个加密卷里然后束之高阁的，如果偶尔要使用（例如给他人的 Key 签名，或者修改 Key 的有效期等 metadata），则需要先导入电脑中，不方便且不够安全。现在我可以把 primary key 同时灌入一个闲置的旧 YubiKey 中，偶尔使用的时候插上旧 YubiKey 输入 PIN 即可。&lt;/p&gt;</description></item><item><title>去国家图书馆复印图书</title><link>https://www.xfzhao.com/nlc/</link><pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate><guid>https://www.xfzhao.com/nlc/</guid><description>&lt;p&gt;初次去国家图书馆复印外文图书的经历。&lt;/p&gt;
+&lt;h2 id="交通布局和开放时间"&gt;
+ &lt;a class="heading-anchor" href="#%e4%ba%a4%e9%80%9a%e5%b8%83%e5%b1%80%e5%92%8c%e5%bc%80%e6%94%be%e6%97%b6%e9%97%b4" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 交通、布局和开放时间
+&lt;/h2&gt;
+&lt;p&gt;北京地铁 4 号线国家图书馆站西南口（总馆南区）或西北口（总馆北区）出。提前大致了解南区和北区的&lt;a href="http://www.nlc.cn/newdzzn/cjwt/#5" target="_blank" rel="noopener noreferrer"&gt;藏书布局&lt;/a&gt;。我需要借阅/复印的外文图书在总馆南区。&lt;/p&gt;
+&lt;p&gt;带好身份证。&lt;/p&gt;
+&lt;p&gt;总馆南区的&lt;a href="http://www.nlc.cn/newdzzn/cjwt/#6" target="_blank" rel="noopener noreferrer"&gt;开放时间&lt;/a&gt;是周一到周日 9:00-17:00. 上面的读者指南链接里的信息有些过时，总馆南区的封闭改造早已结束了。预约取书、复印书籍等需要一定的时间（1-2 小时），为了在 17:00 闭馆之前及时离开，要合理规划进馆时间。&lt;/p&gt;
+&lt;h2 id="存包进馆办卡"&gt;
+ &lt;a class="heading-anchor" href="#%e5%ad%98%e5%8c%85%e8%bf%9b%e9%a6%86%e5%8a%9e%e5%8d%a1" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 存包、进馆、办卡
+&lt;/h2&gt;
+&lt;p&gt;各区入口有存包处。南区入口的存包处一般只存小包，大件如行李箱等可以咨询典籍博物馆的存包处。如果携带有电脑，可以在存包处换取一个网袋，将电脑、文具及自带资料等带入馆。离开时，凭网袋换回自己的包。&lt;/p&gt;
+&lt;p&gt;存包后进馆，进馆后有一个简单的安检。&lt;/p&gt;
+&lt;p&gt;南区进馆后一楼左手边有个办证处，可以自助办理读者卡及加减功能。只需用身份证和电话号码等信息即可快速办理一张读者卡，卡默认密码及修改方法&lt;a href="http://www.nlc.cn/newdzzn/cjwt/201102/t20110216_37197.htm#11" target="_blank" rel="noopener noreferrer"&gt;见此&lt;/a&gt;。如果需要开通中文图书外借功能，需要缴纳 100 元押金，英文图书外借功能需要缴纳 1000 元押金。押金只收现金，馆内二楼有 ATM 机可取。交押金可获得一份收据，以后可凭收据、读者卡和身份证办理退押金手续，务必保管好此三样证件。&lt;/p&gt;
+&lt;h2 id="查询预约取书馆内网络"&gt;
+ &lt;a class="heading-anchor" href="#%e6%9f%a5%e8%af%a2%e9%a2%84%e7%ba%a6%e5%8f%96%e4%b9%a6%e9%a6%86%e5%86%85%e7%bd%91%e7%bb%9c" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 查询、预约取书、馆内网络
+&lt;/h2&gt;
+&lt;p&gt;办理读者卡后，可以在&lt;a href="http://opac.nlc.cn/F/NXGK5C3J1T8KSP2L9VJ827B3QLHAG8U2RBBI4QVYXIF29ILJVI-18303?func=file&amp;amp;file_name=login-session" target="_blank" rel="noopener noreferrer"&gt;国图联机公共目录（OPAC）&lt;/a&gt;登录，然后在「检索首页」检索需要的书籍。查询到书目后，根据网页上的说明，查看所有馆藏单册信息，并点击预约按钮。如果未登录，或者时间不在 0:00 – 16:00 范围内（求证？），可能看不到预约按钮。预约后，过一段时间书籍会送到指定位置，几分钟到几十分钟都有可能。&lt;/p&gt;
+&lt;p&gt;以上 OPAC 的相关操作都可以在公共互联网上完成。馆内也有分布各处的终端电脑可供读者操作；也可以使用自己携带的电脑，馆内有免费公共 Wi-Fi（用读者卡卡号和密码登录，似乎是每个读者卡限制一台设备联网）。&lt;/p&gt;
+&lt;p&gt;我预约书籍时，尚未给读者卡增加英文图书外借功能，所以图书被送到了外文文献第一阅览室。据总咨询台工作人员说，如果开通的外借功能，能外借的书可能会默认送到外借的出纳台。在阅览室取的书是不能外借的，只能馆内阅览，当天归还。&lt;/p&gt;
+&lt;p&gt;图书可取时并没有短信、邮件等通知，需要自己登录 OPAC 时常关注图书预约状态的变化。取书时，刷读者卡并输入密码。&lt;/p&gt;
+&lt;h2 id="馆内复印"&gt;
+ &lt;a class="heading-anchor" href="#%e9%a6%86%e5%86%85%e5%a4%8d%e5%8d%b0" aria-label="Link to this section"&gt;&lt;/a&gt;
+ 馆内复印
+&lt;/h2&gt;
+&lt;p&gt;在阅览室内，填写复印委托单，申请复印。馆内只允许复印出版 40 年以内的书。目前黑白复印的价格大致是 0.4 元/张 A4 或 B5 纸，双面。装订 5 块钱。其他各种规格的标价我没记下来，有需要可以在填写委托单时自行查看。&lt;/p&gt;
+&lt;p&gt;馆内提供多种复印方式，例如原书原样复印、或者一张 A4 纸印四面等。我借阅的书大概是 B5 大小，可以选择「四面」方式，即 A4 纸的一面上横着摆两页内容，一张 A 纸总共可容纳原书四面内容。原书尺寸是 B5，这样印出来文字会稍微缩小，但我印出来的效果不错，完全不影响阅读。&lt;/p&gt;
+&lt;p&gt;填完复印委托单之后，把委托单和书交给工作人员，他们就会把书送到专门的复印处复印。总馆南区的复印处在二楼总咨询台旁边。&lt;/p&gt;
+&lt;p&gt;复印一本书可能需要数十分钟到一两个小时（我复印了两本 ～200 页的书），复印完成时也没有通知，但复印完成后工作人员会默认自动将图书原件归还，所以如果在 OPAC 登录后看到自己借阅历史列表里显示图书已经归还了，就说明复印已经完成了。此时可以取交钱取复印件，不需要刷卡，工作人员只口头询问了卡号后几位。可以使用现金、支付宝、公务卡交费。&lt;/p&gt;
+&lt;p&gt;然后就可以带着复印的书离开啦。&lt;/p&gt;</description></item></channel></rss>
