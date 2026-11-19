@@ -1,0 +1,83 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=referrer content="no-referrer-when-downgrade"><title>Beancount 记账 | ~xf</title><meta name=description content="我从2020年初开始尝试复式记账，使用的软件是Beancount，当时是受了BYVoid这一系列博客文章的影响。现在网络上关于复式记账和Beancount的文章和教程繁多，这里便不再赘述Beancount的基础知识。如果读者对复式记账、Beancount等概念和软件尚不熟悉，我强烈推荐先阅读上面提到的BYVoid的博文。"><meta property="og:url" content="https://www.xfzhao.com/beancount/"><meta property="og:site_name" content="~xf"><meta property="og:title" content="Beancount 记账"><meta property="og:description" content="我从2020年初开始尝试复式记账，使用的软件是Beancount，当时是受了BYVoid这一系列博客文章的影响。现在网络上关于复式记账和Beancount的文章和教程繁多，这里便不再赘述Beancount的基础知识。如果读者对复式记账、Beancount等概念和软件尚不熟悉，我强烈推荐先阅读上面提到的BYVoid的博文。"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2026-11-14T00:00:00+00:00"><meta property="article:modified_time" content="2026-11-14T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Beancount 记账"><meta name=twitter:description content="我从2020年初开始尝试复式记账，使用的软件是Beancount，当时是受了BYVoid这一系列博客文章的影响。现在网络上关于复式记账和Beancount的文章和教程繁多，这里便不再赘述Beancount的基础知识。如果读者对复式记账、Beancount等概念和软件尚不熟悉，我强烈推荐先阅读上面提到的BYVoid的博文。"><meta itemprop=name content="Beancount 记账"><meta itemprop=description content="我从2020年初开始尝试复式记账，使用的软件是Beancount，当时是受了BYVoid这一系列博客文章的影响。现在网络上关于复式记账和Beancount的文章和教程繁多，这里便不再赘述Beancount的基础知识。如果读者对复式记账、Beancount等概念和软件尚不熟悉，我强烈推荐先阅读上面提到的BYVoid的博文。"><meta itemprop=datePublished content="2026-11-14T00:00:00+00:00"><meta itemprop=dateModified content="2026-11-14T00:00:00+00:00"><meta itemprop=wordCount content="5248"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&family=Noto+Serif+HK:wght@500..700&family=Noto+Serif+SC:wght@500..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"><link rel=stylesheet href=/css/bundle.min.e62a90a44d130c084e29e9ee3ca93b5bc5da35865a6eb49bd2eb28a65eea0f89.css integrity="sha256-5iqQpE0TDAhOKenuPKk7W8XaNYZabrSb0usopl7qD4k=" crossorigin=anonymous><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest></head><body><main><h1 class=section-title>Beancount 记账</h1><nav class=page-nav><a href=/>~xf</a>
+<a href=/notes/>/notes</a>
+<a href=/blog/>/blog</a></nav><p><time datetime=2026-11-14 pubdate>2026-11-14</time></p><section><p>我从2020年初开始尝试复式记账，使用的软件是Beancount，当时是受了<a href=https://byvoid.com/zht/blog/beancount-bookkeeping-1/ target=_blank rel="noopener noreferrer">BYVoid这一系列博客文章</a>的影响。现在网络上关于复式记账和Beancount的文章和教程繁多，这里便不再赘述Beancount的基础知识。如果读者对复式记账、Beancount等概念和软件尚不熟悉，我强烈推荐先阅读上面提到的BYVoid的博文。</p><p>然而，记账这件事与每个人的生活方式和习惯高度耦合，千人千面，就账户分类、记账粒度等各方面操作细节，每个人的选择不尽相同，久而久之就会形成一套自己独一无二的记账系统。这篇文章就讨论一下我个人记账的一点经验。</p><p>与市面上琳琅满目的记账软件相比，我使用Beancount的方式比较原始，没有手机端，只在电脑端<a href="https://marketplace.visualstudio.com/items?itemName=Lencerf.beancount" target=_blank rel="noopener noreferrer">VS Code</a>里手工记录。绝大多数日常支出其实都有电子记录，散落在各家银行收支明细、信用卡账单、微信/支付宝账单里。本文中所谓的「记账」，其实就是「每周在闲暇时坐下来，打开电脑，将过去一段时间内散落在各个App里的消费记录，手工整合到一个『格式符合Beancount parser定义』的纯文本文件里」。我没有使用自动化的账单解析/导入工具（GitHub上有不少，可以导入信用卡/支付宝等账单）。我个人觉得大多数不联网的自动解析脚本其实没什么隐私泄露风险，但我一直担心这些脚本不能自动适应我近几年「打磨」出来的账户分类体系，对它们进行改造又需要不少精力，故出于懒惰而手工记账至今。但话说回来，Beancount基于纯文本，语法定义明确，对AI（I mean LLM）相当友好，有兴趣的朋友不妨一试。</p><h2 id=账户分类和命名的考量><a class=heading-anchor href=#%e8%b4%a6%e6%88%b7%e5%88%86%e7%b1%bb%e5%92%8c%e5%91%bd%e5%90%8d%e7%9a%84%e8%80%83%e9%87%8f aria-label="Link to this section"></a>账户分类和命名的考量</h2><p>一开始我的记账非常详细，例如去超市买的食材每一项都会记录成一个posting（当时的账户命名现在看来也很奇怪）：</p><pre tabindex=0><code class=language-beancount data-lang=beancount>; journal/202005.bean
+2020-05-08 * &#34;华润万家&#34; &#34;食品&#34;
+  Expenses:Food:Daily          4.99 CNY ; 话梅糖
+  Expenses:Food:Daily          7.69 CNY ; 薯片
+  Expenses:Shopping:Daily     19.90 CNY ; 卫生纸🧻
+  Expenses:Food:Daily          2.48 CNY ; 小麦仁
+  Expenses:Food:Daily          4.59 CNY ; 黑米
+  Expenses:Food:Daily          4.56 CNY ; 干辣椒
+  Expenses:Food:Daily          5.00 CNY ; 吐司面包🍞
+  Expenses:Food:Daily         14.89 CNY ; 巧乐滋雪糕🍦
+  Liabilities:Credit:CN:CMB  -64.10 CNY
+</code></pre><p>后来我发现自己的生活形成了一定的重复模式，大部分时候去超市购买的食材（肉、菜）也没有什么特别，于是从三四年前开始我对自己的<code>Expenses:*</code>账户分类进行了一次修订，同时简化了这类日常开支的记账方式：每一类物品只记录一个总价，例如一次超市购物中，所有食材只记录一行总价（<code>Expenses:Food:Groceries</code>），不再记录每一项商品的名称。</p><p>记账的考量之一是日后复盘时能够看到相对合理的分类及必要的信息，在此前提之下，记账的过程本身应该尽量简化。过度复杂的账户树和过细的账项粒度既不利于分析，也会增加记账的心理负担，让人更容易放弃。</p><p>目前我的<code>Expenses:Food:*</code>账户下只有 2 个子账户，其中<code>Expenses:Food:Meals</code>表示餐馆外食（现成的熟制食物，包括外卖），而<code>Expenses:Food:Groceries</code>则几乎囊括了所有除<code>Meals</code>之外的饮食支出，包括超市买的需要回家加工的食材、即食的水果、坚果零食和饮料等。
+类似地，我的<code>Expenses:*</code>和<code>Equity:*</code>大类下还有如下账户（non-exhaustive）：</p><pre tabindex=0><code class=language-beancount data-lang=beancount>; accounts.bean
+* Expenses - 支出
+** Clothing - 衣
+1970-01-01 open Expenses:Clothing ; 一切可穿戴的（非电子产品）+箱包。不再细分子项。
+
+** Food - 食
+1970-01-01 open Expenses:Food:Meals
+  note: &#34;餐馆外食（现成的熟制食物，包括外卖、街头小吃）&#34;
+1970-01-01 open Expenses:Food:Groceries
+  note: &#34;除上项外的其他一切饮食支出，大部分是超市购买食材、零食水果&#34;
+
+** Household - 住
+1970-01-01 open Expenses:Household:Supplies
+  note: &#34;家居耗材，如日化、纸巾、文具耗材等&#34;
+1970-01-01 open Expenses:Household:Furnish
+  note: &#34;耐用家居用品，如家具家电、厨具等&#34;
+2020-01-02 open Expenses:Household:Utilities
+  note: &#34;一切家居经常性*服务*支出，包括水/电/网/燃气、洗衣、保洁、快递、理发等&#34;
+2020-01-02 open Expenses:Housing:Rent
+  note: &#34;房租或宿舍费（非旅游性质的）&#34;
+
+** Travel - 行
+1970-01-01 open Expenses:Travel:Commuting ; 在「通常居住」城市的一切交通费
+1970-01-01 open Expenses:Travel:Intercity ; 城际旅行（飞机火车+在旅游目的地的交通费）
+1970-01-01 open Expenses:Travel:Hotel ; 外出住宿费用
+1970-01-01 open Expenses:Travel:Miscellaneous ; 一切其他杂项出行费用，如景点门票
+; Note: 就用途而言，旅游签证与景点门票的性质相似，记入 Travel:Miscellaneous。
+
+** Service - 社会服务、通讯/金融服务等
+; Membership: 「通过支付一定费用，获得_一定期限内_的权益或服务」。
+;       权益可能是有限居留权、兜底保障、福利等，总之不易量化为确定的现金价值。
+;       **例**：基本养老/医保（进统筹账户部分）、非旅游签证申请费、购物网站会员费等
+;       **反例**：养老/医保（个人账户部分）、储蓄型保险，应记入固定资产 Assets:Fixed:*
+1970-01-01 open Expenses:Service:Membership
+; ... 其他通讯/金融服务支出账户&lt;略&gt;
+
+** Leisure - 康乐文化消费
+1970-01-01 open Expenses:Leisure:Sports ; 体育，场地费、器材装备等
+1970-01-01 open Expenses:Leisure:Culture ; 文化类消费，书籍、音乐、电影、演出、展览等
+
+** Tax - 税务
+; ...
+
+** Family - 家人消费
+; ...
+
+** Social - 人情消费
+; ...
+
+** Miscellaneous - 其他消费
+; 医疗和其他。
+; 其中医疗支出我只会把自费和个人账户自付的部分记为Expenses，统筹报销的不记。
+
+* Equity ; 权益账户 - 调整账户余额时用到
+
+1970-01-01 open Equity:Opening-Balances
+1970-01-01 open Equity:Windfall ; 暂未查清的对账错误
+1970-01-01 open Equity:Rounding ; 四舍五入产生的误差
+
+; Equity:Instalment 用于平摊一些一次性支付的款项。
+; 例如租房时租金季付/半年付， 为了避免付租金的当月产生一大笔 Expenses 而影响
+; 按月复盘时对收支状况的判断，可借道 Equity:Instalment: 将支出分摊到各月份。
+2020-01-01 open Equity:Instalment:Housing
+2020-01-01 open Equity:Instalment:Tax
+</code></pre><p>出于隐私考虑，我隐去了一些账户及注释。当然即便不隐去，这个账户列表也未必适合其他人，甚至未必适合一年后的我自己。现在的我无房无车，如果未来哪一天购置了这些物品（资产），抑或生活方式/地点发生重大变化时，大概还需要对账户系统再做一些修订。</p><p>话虽如此，在划分账户的时候，我总是希望这套系统尽量简化和稳定。使用较少和较笼统的分类，可以减轻记账时的决策负担（少纠结「某项支出应该归入哪一类」）。因此，我不会在<code>Expenses:Food:*</code>下面区分饮料（<code>Beverage</code>/<code>Drinks</code>）或水果（<code>Fruits</code>）等小类；然而我区分了<code>Groceries</code>和<code>Meals</code>，这是因为我和对象都很好奇我们平时的饮食支出之中，在外面「吃现成的」花了多少钱，「买食材自己做」又花了多少钱。因此，账户分类的命名的规则很大程度上取决于你更关心哪类数据。对于并不在乎这些区别的人而言，把「凡是能吃的东西」全部计入<code>Food</code>，不再细分类别，也未尝不可。</p><p>又如，我把养老/医保的个人账户、储蓄型保险视为固定资产（<code>Assets:Fixed:*</code>），从财务和会计的专业角度来看，这种分类未必准确；但个人复式记账有很大的自由度。因为这些资产有相对明确的现金价值，但流动性较差，从「变现」角度来说又与固定资产有些相似，为了简化记账，我仍然选择如此归类。类似地，其他账户的命名也可能是出于一些十分个人化的想法，未必是财会领域的共识，在此不再赘述。</p><p>这套账户分类系统至今已经运行了4年多，未有大的改变，也算是适合我自己的习惯了。</p><h2 id=记账周期><a class=heading-anchor href=#%e8%ae%b0%e8%b4%a6%e5%91%a8%e6%9c%9f aria-label="Link to this section"></a>记账周期</h2><p>另外在记账的时间粒度上，我也稍微做了一点简化。例如地铁、巴士这种几乎每天都会发生的通勤支出，如果每一笔都记录则太麻烦，而且对未来的分析并无增益；好在这些支出一般都出自一张专用的储值卡（交通卡），不与其他日常消费混合，我便选择每个月记录一次：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>交通卡月初余额 + 本月增值额 - 月末余额 - 非公共交通支出 = 本月公共交通支出
+</span></span></code></pre></div><p>计入 <code>Expenses:Travel:Commuting</code>。</p><p>这种记账方式也反过来影响了我对支付工具的使用习惯。例如，我在中国内地会尽量避免使用支付宝/微信乘车码等支付方式搭乘公共交通工具，就是因为这样产生的交通费会从绑定的信用卡支出，混合在其他日常支出中，需要逐条分辨和记录<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>；而在香港，公共交通首选支付方式自然是拍八达通；而虽然我尽量以信用卡作为日常消费支付方式，但有的小店不接受信用卡，难免也会用八达通支付。每当八达通有此类支出时，我会单独记录（实际上八达通银包App中已提供支出分类统计），这便是上式中「非公共交通支出」一项的来由。</p><p>Beancount有许多插件（plugins）可以用于辅助记账，例如抓取股票的价格、周期性自动记账等。我目前使用的唯一一个插件是<a href=https://github.com/beancount/beanlabs/blob/master/beanlabs/plugins/forecast.py target=_blank rel="noopener noreferrer">forecast</a>，用于记录会重复发生的transactions，例如：</p><pre tabindex=0><code class=language-beancount data-lang=beancount>2023-08-26 # &#34;Apple&#34; &#34;iCloud 200GB Family Plan [MONTHLY UNTIL 2026-12-26]&#34;
+  Expenses:Service:Software                              23.00 HKD
+  Assets:Prepaid:AppStore
+</code></pre><h2 id=夫妻合并记账><a class=heading-anchor href=#%e5%a4%ab%e5%a6%bb%e5%90%88%e5%b9%b6%e8%ae%b0%e8%b4%a6 aria-label="Link to this section"></a>夫妻合并记账</h2><p>最开始记账的时候，我的账本中只有我自己名下的账户。当时由于求学和工作地点的限制，我和女友的确有一段时间分居两地，财务上也相对独立；而前几年领证结婚并实际在一起生活之后，如果继续只记录一个人的账户，显然不再能全面地反映我们的家庭财务状况。我花了几天时间，逐渐把另一半名下的储蓄、信用卡等账户也加入到账本中。</p><p>在家庭合并记账的结构之下，我们并不在意某一笔日常消费是从谁的名下支出的。因为在记账意义上，「一笔消费」只不过是一些钱从某个<code>Liabilities:Credit:XX</code>账户转移到<code>Expenses:*</code>账户，至于这个<code>XX</code>是我的还是她的信用卡，没多大分别。同样，我可以为了「薅某个银行的羊毛」（例如资产提升计划或定存利率优惠）随手从她账户中转几万块钱到我的银行账户，反之亦然。这个操作只不过是一笔钱从<code>Assets:X</code>转移到<code>Assets:Y</code>。在这个过程中，这笔钱在我们整体家庭财务中的角色毫无变化。</p><p>当然，在实际操作中，我还是会尽量保持两个人名下的资产相对平衡，这完全是出于风险控制考虑。尤其是一个人遭遇意外时，另一个人尽量不要在程序上瞬间失去对家庭大部分资产的控制（有的银行在得知客户失去行为能力〔如进ICU〕时，会冻结客户户口，家人想取钱付手术费也非常麻烦。如果此时另一人还可以自主、合法地动用大约一半的家庭资产，或许有助于应急）。</p><p>在上述安排之下，双方父母的钱属于外部资金。我们与各自父母的资金往来，可能会被记为资产（<code>Assets</code>）与其他三类账户之间的<em>转移</em>：（1）收入（<code>Income</code>，父母的赠予）、（2）支出（<code>Expenses</code>，赠予父母的钱或给家里买东西）或（3）债务（<code>Liabilities</code>，父母暂存这里让我们打理的钱）。</p><h2 id=对消费观念的影响><a class=heading-anchor href=#%e5%af%b9%e6%b6%88%e8%b4%b9%e8%a7%82%e5%bf%b5%e7%9a%84%e5%bd%b1%e5%93%8d aria-label="Link to this section"></a>对消费观念的影响</h2><p>记账可以让人更清楚地了解自己的资产和收支状况。这看似是一句废话，但只有真正开始记账才能体会到这句话更具体切身的含义。虽然个人记账相比企业账目而言非常小儿科，但复式记账仍然引入了一些有用的会计和财务概念，帮助我更好地理解不同的「账」之间的分别与关联。本文大部分内容只提到了一般的消费记账，实际上我的账本中也有相当一部分条目涉及到投资理财、税务、报销、分期等内容<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>，这部分的账户和记账方法也稍微复杂一些。在不断打磨树状账户结构、思考记账方法的过程中，我自觉获益匪浅。</p><p>记账的意义当然不是简单地控制（i.e., 减少）消费<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>。在开始记账之前，我们通常已经有了自己的一些消费观念和习惯。有的人花钱「大手大脚」、「月光」或欠下不可控的债务，而有的人（尤其是父母祖辈）「节省了一辈子」，延续了以前的消费观念，极度节省。后者遇到问题时经常放弃「合理用钱解决问题」的选项，做出一些在旁人看来非理性乃至匪夷所思的决策，似乎只有钱本身值钱，所有因为省钱而增加的麻烦、产生的焦虑、花费的时间都一文不值。</p><p>我自己读书的时候花钱比较草率，毕业之后反而越来越保守。但这些不同人生阶段的消费观念有一个共同的特点，就是没有全局规划，要么想买就买，要么能省则省。前两年我和对象也时常会观察到自己在做消费决策时存在类似的问题——一笔钱舍不得花，但一下子也说不清楚为什么舍不得花（只觉得「能省则省」，即基于过去消费观念的「惯性」），没有对价值的定量判断。</p><p>现在是讲究数据说话、从数据中学习的时代，如果我拥有大量关于自己财务状况的观测数据，再加上一段时间的训练，就有可能更加清晰、量化地理解一笔消费对自己总体财务状况的影响。这样我在决策时会更加<em>自信</em>和<em>自由</em>。我很高兴自己在近几年的记账过程中看到了这种趋势。</p><p>即便抛开记账对消费观念的影响不谈，我觉得能使用一组文档记录和反映自己的状态，本身就是一件很酷的事情。同时，记账对我来说也是日记的一种形式。看着某天花了什么钱、去了哪个餐馆，回忆起当天的场景、在脑海中过一遍当天经历的事情，也是一种相当有趣的体验。当然这种感受与我的性格紧密相关，我理解未必每个人都能从记账或日记这类事情中获得乐趣。不同的性格、不同的关注点可能带来全然不同的感受，就像<a href=https://fast.v2ex.com/t/847297#r_11578738 target=_blank rel="noopener noreferrer">这位专注技术的网友</a>。</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>我也不喜欢扫码支付这种形式，因为要事先解锁手机、打开App、点开二维码、对准扫描器，要消耗一些注意力，体验不好。但这是另一个话题了。另外由于一些技术原因，深圳地铁闸机的NFC感应比扫码还慢，真是尴尬。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>只要愿意，你可以用Beancount账本管理各种非金融资产，比如航司积分，甚至实体物品比如……口罩🤣。2020年COVID-19疫情刚爆发的时候全国封控、防疫用品产能和物流没跟上，闹口罩慌，我们的口罩也是精打细算来用的。当时我真的用Beancount记录过。&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>Ref: <a href=https://36kr.com/p/1832974488363524 target=_blank rel="noopener noreferrer">记账，到底有没有意义？</a>&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></section></main></body></html>
